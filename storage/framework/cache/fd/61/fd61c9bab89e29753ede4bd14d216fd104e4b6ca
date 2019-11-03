@@ -1,0 +1,37 @@
+1572775657a:1:{s:19:"opisanie-uslugi.htm";a:10:{s:8:"fileName";s:19:"opisanie-uslugi.htm";s:7:"content";s:493:"title = "Описание Услуги"
+url = "/services/:slug"
+layout = "base"
+is_hidden = 0
+
+[newsPost]
+slug = "{{ :slug }}"
+==
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container">
+    
+    {% component 'newsPost' %}
+    
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+            {% partial 'sidebar/aboutme' %}
+     </div>
+</div>";s:5:"mtime";i:1572774109;s:6:"markup";s:363:"{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container">
+    
+    {% component 'newsPost' %}
+    
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+            {% partial 'sidebar/aboutme' %}
+     </div>
+</div>";s:4:"code";N;s:5:"title";s:29:"Описание Услуги";s:3:"url";s:15:"/services/:slug";s:6:"layout";s:4:"base";s:9:"is_hidden";s:1:"0";s:8:"newsPost";a:1:{s:4:"slug";s:11:"{{ :slug }}";}}}

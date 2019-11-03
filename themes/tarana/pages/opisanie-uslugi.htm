@@ -1,0 +1,23 @@
+title = "Описание Услуги"
+url = "/services/:slug"
+layout = "base"
+is_hidden = 0
+
+[newsPost]
+slug = "{{ :slug }}"
+==
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container">
+    
+    {% component 'newsPost' %}
+    
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+            {% partial 'sidebar/aboutme' %}
+     </div>
+</div>

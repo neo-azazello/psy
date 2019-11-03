@@ -1,0 +1,40 @@
+[viewBag]
+==
+<?php
+use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this->translator = Translator::instance();
+    $this['SelectedLanguage'] = $this->activeLocale = $this->translator->getLocale();
+}
+?>
+==
+{% set CurrentLanguage = SelectedLanguage %}
+<div class="top">
+    <div class="top__background"></div>
+    <div class="container">
+        <div class="top__tagline">Mob: 077 514 42 04</div>
+        <nav class="top__menu">
+            <ul id="menu-top-menu" class="top-navigation">
+                <li class="menu-item menu-item-has-children">
+                    <a href="#"> 
+                        <img src="{{ 'assets/images/flags/'|theme}}/{{CurrentLanguage}}.png" class="flag"> {{'Сменить язык'|_}}
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="menu-item">
+                            <a href="/az{% if this.page.id == 'home-page'%}/{% else %}/{{ this.page.id }}{% endif %}">
+                                <img src="{{ 'assets/images/flags/az.png'|theme}}" class="flag"> Azərbaycan
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/ru{% if this.page.id == 'home-page'%}/{% else %}/{{ this.page.id }}{% endif %}">
+                                <img src="{{ 'assets/images/flags/ru.png'|theme}}" class="flag"> Русский
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

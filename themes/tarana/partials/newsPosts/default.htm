@@ -1,0 +1,24 @@
+==
+{% set posts = __SELF__.posts %}
+{% for post in posts %}
+
+<div class="col-xs-12 col-md-4">
+    <div class="latest-post">
+        <a class="latest-post__thumbnail" href="/services/{{ post.slug }}">
+            <img width="270" height="190" src="{{ post.image|media }}" class="attachment-latest-posts size-latest-posts wp-post-image">
+        </a>
+        
+        <div class="latest-post__categories">
+            <ul class="post-categories">
+                <li>{{ this.page.title }}</li>
+            </ul>
+        </div>
+        
+        <h4 class="latest-post__title">
+            <a href="/services/{{ post.slug }}">{{ post.title }} </a>
+        </h4>
+        <p class="latest-post__excerpt"> {{ post.introductory|raw }} </p>
+    </div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,108 @@
+1572775657a:1:{s:11:"contact.htm";a:12:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:2039:"title = "Связаться"
+url = "/contact"
+layout = "base"
+meta_title = "Мои контакты"
+is_hidden = 0
+
+[viewBag]
+localeTitle[az] = "Əlaqə"
+localeMeta_title[az] = "Əlaqə vasitələri"
+
+[genericForm]
+messages_success = "Ваше сообщение успешно отправлено!"
+messages_errors = "There were errors with your submission"
+mail_recipients[] = "help@psycholog.az"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "compact"
+==
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container">
+        
+        <div class="main-title">
+            <h1 class="main-title__primary">{{'Контактные данные'|_}}</h1>
+        </div>
+
+        <article>
+
+        <div class="panel-grid row m-b-0">
+            <div class="col-md-4 panel-grid-cell">
+                <div class="textwidget">
+                    <h5>Центр Психологии</h5>
+                    <p>Тарана Ариф
+                        <br>44 Джафар Джаббарлы улица
+                        <br>Caspina Plaza, 4-ый этаж</p>
+                    <p>(+994) 77 514 42 04
+                        <br>(+994) 12 987 65 43
+                        <br><a href="mailto:help@psycholog.az">help@psycholog.az</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 panel-grid-cell">      
+                <div class="textwidget">
+                    <div role="form" lang="en-US" dir="ltr">   
+                        {% component 'genericForm' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </article>
+    
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+         {% partial 'sidebar/aboutme' %}
+     </div>
+</div>";s:5:"mtime";i:1572766768;s:6:"markup";s:1441:"{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container">
+        
+        <div class="main-title">
+            <h1 class="main-title__primary">{{'Контактные данные'|_}}</h1>
+        </div>
+
+        <article>
+
+        <div class="panel-grid row m-b-0">
+            <div class="col-md-4 panel-grid-cell">
+                <div class="textwidget">
+                    <h5>Центр Психологии</h5>
+                    <p>Тарана Ариф
+                        <br>44 Джафар Джаббарлы улица
+                        <br>Caspina Plaza, 4-ый этаж</p>
+                    <p>(+994) 77 514 42 04
+                        <br>(+994) 12 987 65 43
+                        <br><a href="mailto:help@psycholog.az">help@psycholog.az</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 panel-grid-cell">      
+                <div class="textwidget">
+                    <div role="form" lang="en-US" dir="ltr">   
+                        {% component 'genericForm' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </article>
+    
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+         {% partial 'sidebar/aboutme' %}
+     </div>
+</div>";s:4:"code";N;s:5:"title";s:18:"Связаться";s:3:"url";s:8:"/contact";s:6:"layout";s:4:"base";s:10:"meta_title";s:23:"Мои контакты";s:9:"is_hidden";s:1:"0";s:7:"viewBag";a:2:{s:11:"localeTitle";a:1:{s:2:"az";s:7:"Əlaqə";}s:16:"localeMeta_title";a:1:{s:2:"az";s:20:"Əlaqə vasitələri";}}s:11:"genericForm";a:11:{s:16:"messages_success";s:64:"Ваше сообщение успешно отправлено!";s:15:"messages_errors";s:38:"There were errors with your submission";s:15:"mail_recipients";a:1:{i:0;s:17:"help@psycholog.az";}s:10:"reset_form";s:1:"1";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"1";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:7:"compact";}}}

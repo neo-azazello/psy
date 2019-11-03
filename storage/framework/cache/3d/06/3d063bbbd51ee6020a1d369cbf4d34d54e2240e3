@@ -1,0 +1,305 @@
+1572775657a:1:{s:13:"home-page.htm";a:12:{s:8:"fileName";s:13:"home-page.htm";s:7:"content";s:8368:"title = "Главная страница"
+url = "/"
+layout = "base"
+description = "This is a home page"
+meta_title = "Главная страница"
+is_hidden = 0
+
+[viewBag]
+localeTitle[az] = "Əsas səhifə"
+==
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    {% partial 'content/slider'%}
+    <div class="content-container">
+        <article>
+
+                <div class="panel-grid row m-b-lg">
+                    <div class="col-md-6">
+                        <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child"
+                            id="panel-6-1-0-0">
+                            <a class="banner" href="http://frequently-asked-questions" target="_self">
+                                <div class="banner__title">
+                                    Privacy Policy</div>
+                                <div class="banner__content">
+                                    Between Doctors and Patients</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child"
+                            id="panel-6-1-1-0">
+                            <a class="banner" href="http://shop" target="_self">
+                                <div class="banner__title">
+                                    Book Recommendations</div>
+                                <div class="banner__content">
+                                    Couple of Books We Recommend You</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END HIGHLIGHT LINK ======== -->
+
+
+                <div class="panel-grid row m-b-lg">
+                    <div class="panel-row-style">
+                        <div class="col-md-12">
+                            <div class="so-panel widget widget-testimonials panel-first-child panel-last-child">
+                                <div class="testimonial grey-wrap">
+                                    <h2 class="widget-title">Testimonials</h2>
+                                    <div class="carousel slide" data-ride="carousel" data-interval="false">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <div class="row">
+                                                    <div class="col-xs-12  col-sm-12">
+                                                        <blockquote>
+                                                            <p class="testimonial__quote">
+                                                                We've had a lot of financial troubles over the
+                                                                years; loss of physical health, job and
+                                                                bankruptcy. Laura's coaching gave us hope and a
+                                                                new sense of vision so we can create our lives
+                                                                together.</p>
+                                                            <cite class="testimonial__author">
+                                                                Anastacia Rockafeller</cite>
+                                                            <div class="testimonial__author-description">
+                                                                Mother of two.</div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END TESTIMONIALS ======== -->
+
+                <!-- ============================
+                                                                                FAQ SECTION
+                                                                                ============================ -->
+
+                <!-- FAQ TITLE -->
+                <div class="panel-grid row m-b">
+                    <div class="col-md-12">
+                        <div class="so-panel widget panel-first-child panel-last-child" id="panel-6-4-0-0">
+                            <div class="text-center panel-widget-style">
+                                <h3 class="widget-title">Frequently Asked Questions</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // end FAQ TITLE -->
+                <div class="panel-grid row m-b-0">
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-0-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What can I expect in the first session when I see a
+                                        therapist?</strong>
+                                </p>
+                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
+                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-1-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What are the signs of being abused by partner?</strong>
+                                </p>
+                                <p>Morbi volutpat velit ac sem vulputate sollicitudin. Aliquam tincidunt finibus
+                                    leo, eget suscipit augue eleifend in.&nbsp;Aliquam erat volutpat.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-2-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What can I expect in the first session when I see a
+                                        therapist?</strong>
+                                </p>
+                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
+                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END FAQ SECTION ======== -->
+
+            </article>
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+ <div class="sidebar">
+        {% partial 'sidebar/aboutme' %}
+ </div>
+</div>";s:5:"mtime";i:1572765768;s:6:"markup";s:8154:"{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    {% partial 'content/slider'%}
+    <div class="content-container">
+        <article>
+
+                <div class="panel-grid row m-b-lg">
+                    <div class="col-md-6">
+                        <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child"
+                            id="panel-6-1-0-0">
+                            <a class="banner" href="http://frequently-asked-questions" target="_self">
+                                <div class="banner__title">
+                                    Privacy Policy</div>
+                                <div class="banner__content">
+                                    Between Doctors and Patients</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child"
+                            id="panel-6-1-1-0">
+                            <a class="banner" href="http://shop" target="_self">
+                                <div class="banner__title">
+                                    Book Recommendations</div>
+                                <div class="banner__content">
+                                    Couple of Books We Recommend You</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END HIGHLIGHT LINK ======== -->
+
+
+                <div class="panel-grid row m-b-lg">
+                    <div class="panel-row-style">
+                        <div class="col-md-12">
+                            <div class="so-panel widget widget-testimonials panel-first-child panel-last-child">
+                                <div class="testimonial grey-wrap">
+                                    <h2 class="widget-title">Testimonials</h2>
+                                    <div class="carousel slide" data-ride="carousel" data-interval="false">
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <div class="row">
+                                                    <div class="col-xs-12  col-sm-12">
+                                                        <blockquote>
+                                                            <p class="testimonial__quote">
+                                                                We've had a lot of financial troubles over the
+                                                                years; loss of physical health, job and
+                                                                bankruptcy. Laura's coaching gave us hope and a
+                                                                new sense of vision so we can create our lives
+                                                                together.</p>
+                                                            <cite class="testimonial__author">
+                                                                Anastacia Rockafeller</cite>
+                                                            <div class="testimonial__author-description">
+                                                                Mother of two.</div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END TESTIMONIALS ======== -->
+
+                <!-- ============================
+                                                                                FAQ SECTION
+                                                                                ============================ -->
+
+                <!-- FAQ TITLE -->
+                <div class="panel-grid row m-b">
+                    <div class="col-md-12">
+                        <div class="so-panel widget panel-first-child panel-last-child" id="panel-6-4-0-0">
+                            <div class="text-center panel-widget-style">
+                                <h3 class="widget-title">Frequently Asked Questions</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // end FAQ TITLE -->
+                <div class="panel-grid row m-b-0">
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-0-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What can I expect in the first session when I see a
+                                        therapist?</strong>
+                                </p>
+                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
+                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-1-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What are the signs of being abused by partner?</strong>
+                                </p>
+                                <p>Morbi volutpat velit ac sem vulputate sollicitudin. Aliquam tincidunt finibus
+                                    leo, eget suscipit augue eleifend in.&nbsp;Aliquam erat volutpat.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child"
+                            id="panel-6-5-2-0">
+                            <div class="textwidget">
+                                <p>
+                                    <strong>What can I expect in the first session when I see a
+                                        therapist?</strong>
+                                </p>
+                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
+                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
+                                <p>
+                                    <a class="read-more" href="faq.html">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========  // END FAQ SECTION ======== -->
+
+            </article>
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+ <div class="sidebar">
+        {% partial 'sidebar/aboutme' %}
+ </div>
+</div>";s:4:"code";N;s:5:"title";s:31:"Главная страница";s:3:"url";s:1:"/";s:6:"layout";s:4:"base";s:11:"description";s:19:"This is a home page";s:10:"meta_title";s:31:"Главная страница";s:9:"is_hidden";s:1:"0";s:7:"viewBag";a:1:{s:11:"localeTitle";a:1:{s:2:"az";s:14:"Əsas səhifə";}}}}

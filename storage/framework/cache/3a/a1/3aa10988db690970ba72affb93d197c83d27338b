@@ -1,0 +1,46 @@
+1572775676a:1:{s:21:"newsPosts/default.htm";a:6:{s:8:"fileName";s:21:"newsPosts/default.htm";s:7:"content";s:785:"==
+{% set posts = __SELF__.posts %}
+{% for post in posts %}
+
+<div class="col-xs-12 col-md-4">
+    <div class="latest-post">
+        <a class="latest-post__thumbnail" href="/services/{{ post.slug }}">
+            <img width="270" height="190" src="{{ post.image|media }}" class="attachment-latest-posts size-latest-posts wp-post-image">
+        </a>
+        
+        <div class="latest-post__categories">
+            <ul class="post-categories">
+                <li>{{ this.page.title }}</li>
+            </ul>
+        </div>
+        
+        <h4 class="latest-post__title">
+            <a href="/services/{{ post.slug }}">{{ post.title }} </a>
+        </h4>
+        <p class="latest-post__excerpt"> {{ post.introductory|raw }} </p>
+    </div>
+</div>
+
+{% endfor %}";s:5:"mtime";i:1572774018;s:6:"markup";s:782:"{% set posts = __SELF__.posts %}
+{% for post in posts %}
+
+<div class="col-xs-12 col-md-4">
+    <div class="latest-post">
+        <a class="latest-post__thumbnail" href="/services/{{ post.slug }}">
+            <img width="270" height="190" src="{{ post.image|media }}" class="attachment-latest-posts size-latest-posts wp-post-image">
+        </a>
+        
+        <div class="latest-post__categories">
+            <ul class="post-categories">
+                <li>{{ this.page.title }}</li>
+            </ul>
+        </div>
+        
+        <h4 class="latest-post__title">
+            <a href="/services/{{ post.slug }}">{{ post.title }} </a>
+        </h4>
+        <p class="latest-post__excerpt"> {{ post.introductory|raw }} </p>
+    </div>
+</div>
+
+{% endfor %}";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

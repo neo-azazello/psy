@@ -1,0 +1,110 @@
+1572775667a:1:{s:24:"content/certificates.htm";a:6:{s:8:"fileName";s:24:"content/certificates.htm";s:7:"content";s:2030:"==
+<div class="panel-grid row m-b-0 certificates">
+    
+    <div class="header">
+      <h2>{{'Мои сертификаты'|_}}</h2>
+    </div>
+    
+    <div class="row lightbox"> 
+      
+      <div class="column">
+        <a href="{{ 'certificates/art_therapy.jpg'|media}}">
+            <img src="{{ 'certificates/art_therapy_crop.jpg'|media}}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/accredited_certificate.jpg'|media}}">
+            <img src="{{ 'certificates/accredited_certificate_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/svidetelstvo.jpg'|media}}">
+            <img src="{{ 'certificates/svidetelstvo_crop.jpg'|media }}" style="width:100%">
+        </a>
+
+      </div>
+      
+      <div class="column">
+        
+        <a href="{{ 'certificates/liga_chlen.jpg'|media }}">
+            <img src="{{ 'certificates/liga_chlen_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/training_coaching.jpg'|media }}">
+            <img src="{{ 'certificates/training_coaching_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/liga_certificate.jpg'|media }}">
+            <img src="{{ 'certificates/liga_certificate_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+      </div>  
+      
+      <div class="column">
+        <a href="{{ 'certificates/psychology_influence.jpg'|media }}">
+            <img src="{{ 'certificates/psychology_influence_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/family_therapy.jpg'|media }}">
+            <img src="{{ 'certificates/family_therapy_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/consultant.jpg'|media }}">
+            <img src="{{'certificates/consultant_crop.jpg'|media}}" style="width:100%">
+        </a>
+      </div>
+      
+    </div>
+</div>";s:5:"mtime";i:1572761530;s:6:"markup";s:2027:"<div class="panel-grid row m-b-0 certificates">
+    
+    <div class="header">
+      <h2>{{'Мои сертификаты'|_}}</h2>
+    </div>
+    
+    <div class="row lightbox"> 
+      
+      <div class="column">
+        <a href="{{ 'certificates/art_therapy.jpg'|media}}">
+            <img src="{{ 'certificates/art_therapy_crop.jpg'|media}}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/accredited_certificate.jpg'|media}}">
+            <img src="{{ 'certificates/accredited_certificate_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/svidetelstvo.jpg'|media}}">
+            <img src="{{ 'certificates/svidetelstvo_crop.jpg'|media }}" style="width:100%">
+        </a>
+
+      </div>
+      
+      <div class="column">
+        
+        <a href="{{ 'certificates/liga_chlen.jpg'|media }}">
+            <img src="{{ 'certificates/liga_chlen_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/training_coaching.jpg'|media }}">
+            <img src="{{ 'certificates/training_coaching_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/liga_certificate.jpg'|media }}">
+            <img src="{{ 'certificates/liga_certificate_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+      </div>  
+      
+      <div class="column">
+        <a href="{{ 'certificates/psychology_influence.jpg'|media }}">
+            <img src="{{ 'certificates/psychology_influence_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/family_therapy.jpg'|media }}">
+            <img src="{{ 'certificates/family_therapy_crop.jpg'|media }}" style="width:100%">
+        </a>
+        
+        <a href="{{ 'certificates/consultant.jpg'|media }}">
+            <img src="{{'certificates/consultant_crop.jpg'|media}}" style="width:100%">
+        </a>
+      </div>
+      
+    </div>
+</div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

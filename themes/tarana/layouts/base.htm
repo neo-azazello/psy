@@ -1,0 +1,23 @@
+description = "Base layout"
+==
+<?php
+use RainLab\Translate\Classes\Translator;
+
+function onStart()
+{
+    $this->translator = Translator::instance();
+    $this['SelectedLanguage'] = $this->activeLocale = $this->translator->getLocale();
+}
+?>
+==
+{% partial 'common/header' %}
+    {% partial 'common/topbar' %}
+        {% partial 'common/mainmenu' %}
+        
+        <div class="container">
+            <div class="row">  
+                {% page %}
+            </div>
+        </div>
+ 
+{% partial 'common/footer' %}

@@ -1,0 +1,55 @@
+1572775657a:1:{s:18:"content/slider.htm";a:6:{s:8:"fileName";s:18:"content/slider.htm";s:7:"content";s:1390:"[viewBag]
+==
+<div class="jumbotron  jumbotron--with-captions">
+    <div class="carousel  slide  fade" id="headerCarousel" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{'assets/images/image-24-425x200.jpg'|theme}}"
+                    srcset="{{'assets/images/image-24-425x200.jpg'|theme}} 425w, {{'assets/images/image-24-850x400.jpg'|theme}} 850w"
+                    sizes="(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)"
+                    alt="&quot;Be smart, help yourself now.&quot;">
+                <div class="jumbotron-content">
+                    <h1 class="jumbotron-content__title">"Be smart, help yourself now."</h1>
+                    <div class="jumbotron-content__description">
+                        <p>
+                            <i>–</i>&nbsp;Mahatma Gandhi</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <a class="left  jumbotron__control" href="#headerCarousel" role="button" data-slide="prev">
+            <i class="fa  fa-chevron-left"></i>
+        </a>
+        <a class="right  jumbotron__control" href="#headerCarousel" role="button" data-slide="next">
+            <i class="fa  fa-chevron-right"></i>
+        </a>
+    </div>
+</div>";s:5:"mtime";i:1571916580;s:6:"markup";s:1377:"<div class="jumbotron  jumbotron--with-captions">
+    <div class="carousel  slide  fade" id="headerCarousel" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{'assets/images/image-24-425x200.jpg'|theme}}"
+                    srcset="{{'assets/images/image-24-425x200.jpg'|theme}} 425w, {{'assets/images/image-24-850x400.jpg'|theme}} 850w"
+                    sizes="(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)"
+                    alt="&quot;Be smart, help yourself now.&quot;">
+                <div class="jumbotron-content">
+                    <h1 class="jumbotron-content__title">"Be smart, help yourself now."</h1>
+                    <div class="jumbotron-content__description">
+                        <p>
+                            <i>–</i>&nbsp;Mahatma Gandhi</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <a class="left  jumbotron__control" href="#headerCarousel" role="button" data-slide="prev">
+            <i class="fa  fa-chevron-left"></i>
+        </a>
+        <a class="right  jumbotron__control" href="#headerCarousel" role="button" data-slide="next">
+            <i class="fa  fa-chevron-right"></i>
+        </a>
+    </div>
+</div>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

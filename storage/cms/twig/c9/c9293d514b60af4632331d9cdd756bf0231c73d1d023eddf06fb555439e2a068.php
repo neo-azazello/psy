@@ -37,29 +37,63 @@ class __TwigTemplate_92847101bf57c4e0b1a52351ec5a28105d90849297435e1cdd804f1d1bc
         echo "<div class=\"jumbotron  jumbotron--with-captions\">
     <div class=\"carousel  slide  fade\" id=\"headerCarousel\" data-ride=\"carousel\" data-interval=\"5000\">
         <div class=\"carousel-inner\">
-            <div class=\"item active\">
-                <img src=\"";
+            
+            ";
         // line 5
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/image-24-425x200.jpg");
-        echo "\"
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["slides"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["slide"]) {
+            // line 6
+            echo "                <div class=\"item active\">
+                <img src=\"";
+            // line 7
+            echo $this->extensions['System\Twig\Extension']->mediaFilter("slider/");
+            echo "/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slideimage", [], "any", false, false, false, 7), "html", null, true);
+            echo "\"
                     srcset=\"";
-        // line 6
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/image-24-425x200.jpg");
-        echo " 425w, ";
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/image-24-850x400.jpg");
-        echo " 850w\"
-                    sizes=\"(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)\"
-                    alt=\"&quot;Be smart, help yourself now.&quot;\">
+            // line 8
+            echo $this->extensions['System\Twig\Extension']->mediaFilter("slider/");
+            echo "/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slideimage", [], "any", false, false, false, 8), "html", null, true);
+            echo " 425w, ";
+            echo $this->extensions['System\Twig\Extension']->mediaFilter("slider/");
+            echo "/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slideimage", [], "any", false, false, false, 8), "html", null, true);
+            echo " 850w\"
+                    sizes=\"(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)\">
                 <div class=\"jumbotron-content\">
-                    <h1 class=\"jumbotron-content__title\">\"Be smart, help yourself now.\"</h1>
-                    <div class=\"jumbotron-content__description\">
-                        <p>
-                            <i>–</i>&nbsp;Mahatma Gandhi</p>
-                    </div>
+                    <h1 class=\"jumbotron-content__title\">
+                     <a href=\"/";
+            // line 12
+            echo twig_escape_filter($this->env, ($context["SelectedLanguage"] ?? null), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slideurl", [], "any", false, false, false, 12), "html", null, true);
+            echo "\">
+                        ";
+            // line 13
+            if ((($context["SelectedLanguage"] ?? null) == "az")) {
+                echo " ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slidename_az", [], "any", false, false, false, 13), "html", null, true);
+                echo " ";
+            }
+            // line 14
+            echo "                        ";
+            if ((($context["SelectedLanguage"] ?? null) == "ru")) {
+                echo " ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["slide"], "slidename_ru", [], "any", false, false, false, 14), "html", null, true);
+            }
+            // line 15
+            echo "                     </a>
+                    </h1>
                 </div>
             </div>
-
-
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slide'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "            
         </div>
         <a class=\"left  jumbotron__control\" href=\"#headerCarousel\" role=\"button\" data-slide=\"prev\">
             <i class=\"fa  fa-chevron-left\"></i>
@@ -83,7 +117,7 @@ class __TwigTemplate_92847101bf57c4e0b1a52351ec5a28105d90849297435e1cdd804f1d1bc
 
     public function getDebugInfo()
     {
-        return array (  47 => 6,  43 => 5,  37 => 1,);
+        return array (  96 => 20,  86 => 15,  80 => 14,  74 => 13,  69 => 12,  56 => 8,  50 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -91,21 +125,23 @@ class __TwigTemplate_92847101bf57c4e0b1a52351ec5a28105d90849297435e1cdd804f1d1bc
         return new Source("<div class=\"jumbotron  jumbotron--with-captions\">
     <div class=\"carousel  slide  fade\" id=\"headerCarousel\" data-ride=\"carousel\" data-interval=\"5000\">
         <div class=\"carousel-inner\">
-            <div class=\"item active\">
-                <img src=\"{{'assets/images/image-24-425x200.jpg'|theme}}\"
-                    srcset=\"{{'assets/images/image-24-425x200.jpg'|theme}} 425w, {{'assets/images/image-24-850x400.jpg'|theme}} 850w\"
-                    sizes=\"(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)\"
-                    alt=\"&quot;Be smart, help yourself now.&quot;\">
+            
+            {% for slide in slides %}
+                <div class=\"item active\">
+                <img src=\"{{'slider/'|media}}/{{slide.slideimage}}\"
+                    srcset=\"{{'slider/'|media}}/{{slide.slideimage}} 425w, {{'slider/'|media}}/{{slide.slideimage}} 850w\"
+                    sizes=\"(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)\">
                 <div class=\"jumbotron-content\">
-                    <h1 class=\"jumbotron-content__title\">\"Be smart, help yourself now.\"</h1>
-                    <div class=\"jumbotron-content__description\">
-                        <p>
-                            <i>–</i>&nbsp;Mahatma Gandhi</p>
-                    </div>
+                    <h1 class=\"jumbotron-content__title\">
+                     <a href=\"/{{SelectedLanguage}}{{slide.slideurl}}\">
+                        {% if SelectedLanguage == 'az' %} {{slide.slidename_az}} {% endif %}
+                        {% if SelectedLanguage == 'ru' %} {{slide.slidename_ru}}{% endif %}
+                     </a>
+                    </h1>
                 </div>
             </div>
-
-
+            {% endfor %}
+            
         </div>
         <a class=\"left  jumbotron__control\" href=\"#headerCarousel\" role=\"button\" data-slide=\"prev\">
             <i class=\"fa  fa-chevron-left\"></i>

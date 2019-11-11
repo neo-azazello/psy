@@ -1,0 +1,18 @@
+1573480863a:1:{s:17:"sidebar/insta.htm";a:6:{s:8:"fileName";s:17:"sidebar/insta.htm";s:7:"content";s:338:"==
+<span>
+    <div class="carousel slide widget" style="padding: inherit;">
+        <div class="carousel-inner lightbox">
+            <a href="{{ 'insta_scan.jpeg'|media }}">
+                <img class="about-us__image" src="{{ 'insta_scan.jpeg'|media }}" style="max-width:100%">
+            </a>
+        </div>
+    </div>
+</span>";s:5:"mtime";i:1573478660;s:6:"markup";s:335:"<span>
+    <div class="carousel slide widget" style="padding: inherit;">
+        <div class="carousel-inner lightbox">
+            <a href="{{ 'insta_scan.jpeg'|media }}">
+                <img class="about-us__image" src="{{ 'insta_scan.jpeg'|media }}" style="max-width:100%">
+            </a>
+        </div>
+    </div>
+</span>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

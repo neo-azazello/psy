@@ -1,4 +1,4 @@
-1572775676a:1:{s:21:"newsPosts/default.htm";a:6:{s:8:"fileName";s:21:"newsPosts/default.htm";s:7:"content";s:785:"==
+1573463121a:1:{s:21:"newsPosts/default.htm";a:6:{s:8:"fileName";s:21:"newsPosts/default.htm";s:7:"content";s:789:"==
 {% set posts = __SELF__.posts %}
 {% for post in posts %}
 
@@ -17,11 +17,11 @@
         <h4 class="latest-post__title">
             <a href="/services/{{ post.slug }}">{{ post.title }} </a>
         </h4>
-        <p class="latest-post__excerpt"> {{ post.introductory|raw }} </p>
+        <div class="latest-post__excerpt"> {{ post.introductory|raw }} </div>
     </div>
 </div>
 
-{% endfor %}";s:5:"mtime";i:1572774018;s:6:"markup";s:782:"{% set posts = __SELF__.posts %}
+{% endfor %}";s:5:"mtime";i:1572778722;s:6:"markup";s:786:"{% set posts = __SELF__.posts %}
 {% for post in posts %}
 
 <div class="col-xs-12 col-md-4">
@@ -39,7 +39,7 @@
         <h4 class="latest-post__title">
             <a href="/services/{{ post.slug }}">{{ post.title }} </a>
         </h4>
-        <p class="latest-post__excerpt"> {{ post.introductory|raw }} </p>
+        <div class="latest-post__excerpt"> {{ post.introductory|raw }} </div>
     </div>
 </div>
 

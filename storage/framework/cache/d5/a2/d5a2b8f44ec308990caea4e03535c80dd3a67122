@@ -1,0 +1,60 @@
+1573469881a:1:{s:20:"newsPost/default.htm";a:6:{s:8:"fileName";s:20:"newsPost/default.htm";s:7:"content";s:1024:"==
+{% set post = __SELF__.post %}
+
+    <div class="main-title">
+        <h1 class="main-title__primary">{{post.title}}</h1>
+    </div>
+        
+        <div>
+        
+            <div class="panel-grid row m-b-0">
+                
+                <div class="col-md-6 panel-grid-cell">
+                    <div class="textwidget">
+                        {{ post.content|raw }}
+                    </div>
+                </div>
+                
+                <div class="col-md-6 panel-grid-cell">
+                    <div class="textwidget">
+                        <p>
+                            <img class="alignnone size-full" src="{{ post.image|media }}" width="850" height="480">
+                        </p>
+                        <p>
+                           <img class="alignnone size-full " src="assets/images/image-6.jpg" width="850" height="480">
+                        </p>
+        
+                    </div>
+                </div>
+            </div>
+        
+        </div>";s:5:"mtime";i:1572774343;s:6:"markup";s:1021:"{% set post = __SELF__.post %}
+
+    <div class="main-title">
+        <h1 class="main-title__primary">{{post.title}}</h1>
+    </div>
+        
+        <div>
+        
+            <div class="panel-grid row m-b-0">
+                
+                <div class="col-md-6 panel-grid-cell">
+                    <div class="textwidget">
+                        {{ post.content|raw }}
+                    </div>
+                </div>
+                
+                <div class="col-md-6 panel-grid-cell">
+                    <div class="textwidget">
+                        <p>
+                            <img class="alignnone size-full" src="{{ post.image|media }}" width="850" height="480">
+                        </p>
+                        <p>
+                           <img class="alignnone size-full " src="assets/images/image-6.jpg" width="850" height="480">
+                        </p>
+        
+                    </div>
+                </div>
+            </div>
+        
+        </div>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

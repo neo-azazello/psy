@@ -1,4 +1,4 @@
-1572775657a:1:{s:11:"aboutme.htm";a:11:{s:8:"fileName";s:11:"aboutme.htm";s:7:"content";s:1366:"title = "Про меня"
+1573480863a:1:{s:11:"aboutme.htm";a:11:{s:8:"fileName";s:11:"aboutme.htm";s:7:"content";s:1395:"title = "Про меня"
 url = "/aboutme"
 layout = "base"
 meta_title = "Коротко обо мне"
@@ -41,9 +41,9 @@ localeTitle[az] = "Özüm haqqında"
 {#THE BLOCK OF SIDEBAR#}
 <div class="col-xs-12  col-md-3  col-md-pull-9">
  <div class="sidebar">
- 
+ {% partial 'sidebar/insta' %}
   </div>
-</div>";s:5:"mtime";i:1572761782;s:6:"markup";s:1198:"{#THE BLOCK OF MAIN CONTENT#}
+</div>";s:5:"mtime";i:1573478812;s:6:"markup";s:1227:"{#THE BLOCK OF MAIN CONTENT#}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
 <div class="content-container">
 
@@ -77,6 +77,6 @@ localeTitle[az] = "Özüm haqqında"
 {#THE BLOCK OF SIDEBAR#}
 <div class="col-xs-12  col-md-3  col-md-pull-9">
  <div class="sidebar">
- 
+ {% partial 'sidebar/insta' %}
   </div>
 </div>";s:4:"code";N;s:5:"title";s:15:"Про меня";s:3:"url";s:8:"/aboutme";s:6:"layout";s:4:"base";s:10:"meta_title";s:28:"Коротко обо мне";s:9:"is_hidden";s:1:"0";s:7:"viewBag";a:1:{s:11:"localeTitle";a:1:{s:2:"az";s:16:"Özüm haqqında";}}}}

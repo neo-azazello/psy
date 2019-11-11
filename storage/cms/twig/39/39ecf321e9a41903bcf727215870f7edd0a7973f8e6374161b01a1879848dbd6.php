@@ -70,10 +70,10 @@ class __TwigTemplate_6be228bfaef68c3f1d5b8c1cd5ef9b0cdbade3af142cd67a71825ea51ab
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 17), "html", null, true);
             echo " </a>
         </h4>
-        <p class=\"latest-post__excerpt\"> ";
+        <div class=\"latest-post__excerpt\"> ";
             // line 19
             echo twig_get_attribute($this->env, $this->source, $context["post"], "introductory", [], "any", false, false, false, 19);
-            echo " </p>
+            echo " </div>
     </div>
 </div>
 
@@ -119,7 +119,7 @@ class __TwigTemplate_6be228bfaef68c3f1d5b8c1cd5ef9b0cdbade3af142cd67a71825ea51ab
         <h4 class=\"latest-post__title\">
             <a href=\"/services/{{ post.slug }}\">{{ post.title }} </a>
         </h4>
-        <p class=\"latest-post__excerpt\"> {{ post.introductory|raw }} </p>
+        <div class=\"latest-post__excerpt\"> {{ post.introductory|raw }} </div>
     </div>
 </div>
 

@@ -1,4 +1,10 @@
-1572775657a:1:{s:19:"common/mainmenu.htm";a:6:{s:8:"fileName";s:19:"common/mainmenu.htm";s:7:"content";s:3049:"[viewBag]
+1573480863a:1:{s:19:"common/mainmenu.htm";a:6:{s:8:"fileName";s:19:"common/mainmenu.htm";s:7:"content";s:3330:"[viewBag]
+==
+<?php
+function onStart() {
+   $this['services'] = Db::table('indikator_news_posts')->get();
+}
+?>
 ==
 {% set current = 'current-menu-item current_page_item' %}
 
@@ -42,9 +48,11 @@
                         <li class="menu-item {% if this.page.id == 'services' %} {{current}} {% endif %} menu-item-has-children">
                             <a href="/{{SelectedLanguage}}/services">{{'Услуги'|_}}</a>
                             <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a href="#">XXXX</a>
-                                </li>
+                                {% for service in services%}
+                                    <li class="menu-item">
+                                        <a href="/{{SelectedLanguage}}/services/{{service.slug}}">{{service.title}}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </li>
                         
@@ -61,7 +69,7 @@
             </div>
         </div>
     </header>
-</div>";s:5:"mtime";i:1572119899;s:6:"markup";s:3036:"{% set current = 'current-menu-item current_page_item' %}
+</div>";s:5:"mtime";i:1572786231;s:6:"markup";s:3215:"{% set current = 'current-menu-item current_page_item' %}
 
 <div class="container">
     <header class="header">
@@ -103,9 +111,11 @@
                         <li class="menu-item {% if this.page.id == 'services' %} {{current}} {% endif %} menu-item-has-children">
                             <a href="/{{SelectedLanguage}}/services">{{'Услуги'|_}}</a>
                             <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <a href="#">XXXX</a>
-                                </li>
+                                {% for service in services%}
+                                    <li class="menu-item">
+                                        <a href="/{{SelectedLanguage}}/services/{{service.slug}}">{{service.title}}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </li>
                         
@@ -122,4 +132,6 @@
             </div>
         </div>
     </header>
-</div>";s:4:"code";N;s:7:"viewBag";a:0:{}}}
+</div>";s:4:"code";s:89:"function onStart() {
+   $this['services'] = Db::table('indikator_news_posts')->get();
+}";s:7:"viewBag";a:0:{}}}

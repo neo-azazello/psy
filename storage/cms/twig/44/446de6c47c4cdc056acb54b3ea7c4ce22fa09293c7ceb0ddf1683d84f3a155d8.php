@@ -87,8 +87,13 @@ class __TwigTemplate_cc26156fd0030be64384be74e90c21c17c646075562f4ad74f8317e0720
         // line 33
         echo "<div class=\"col-xs-12  col-md-3  col-md-pull-9\">
  <div class=\"sidebar\">
- 
-  </div>
+ ";
+        // line 35
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("sidebar/insta"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 36
+        echo "  </div>
 </div>";
     }
 
@@ -104,7 +109,7 @@ class __TwigTemplate_cc26156fd0030be64384be74e90c21c17c646075562f4ad74f8317e0720
 
     public function getDebugInfo()
     {
-        return array (  88 => 33,  82 => 28,  78 => 27,  68 => 20,  60 => 14,  56 => 13,  47 => 7,  43 => 6,  37 => 2,);
+        return array (  96 => 36,  92 => 35,  88 => 33,  82 => 28,  78 => 27,  68 => 20,  60 => 14,  56 => 13,  47 => 7,  43 => 6,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -143,7 +148,7 @@ class __TwigTemplate_cc26156fd0030be64384be74e90c21c17c646075562f4ad74f8317e0720
 {#THE BLOCK OF SIDEBAR#}
 <div class=\"col-xs-12  col-md-3  col-md-pull-9\">
  <div class=\"sidebar\">
- 
+ {% partial 'sidebar/insta' %}
   </div>
 </div>", "/shared/httpd/psycholog/htdocs/themes/tarana/pages/aboutme.htm", "");
     }

@@ -41,46 +41,38 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("content/slider"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 4
-        echo "    <div class=\"content-container\">
+        echo "    <div class=\"\">
         <article>
-
-                <div class=\"panel-grid row m-b-lg\">
-                    <div class=\"col-md-6\">
-                        <div class=\"so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child\"
-                            id=\"panel-6-1-0-0\">
-                            <a class=\"banner\" href=\"http://frequently-asked-questions\" target=\"_self\">
-                                <div class=\"banner__title\">
-                                    Privacy Policy</div>
-                                <div class=\"banner__content\">
-                                    Between Doctors and Patients</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class=\"col-md-6\">
-                        <div class=\"so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child\"
-                            id=\"panel-6-1-1-0\">
-                            <a class=\"banner\" href=\"http://shop\" target=\"_self\">
-                                <div class=\"banner__title\">
-                                    Book Recommendations</div>
-                                <div class=\"banner__content\">
-                                    Couple of Books We Recommend You</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========  // END HIGHLIGHT LINK ======== -->
-
-
-                <div class=\"panel-grid row m-b-lg\">
+            <div class=\"panel-grid row m-b-lg\">
                     <div class=\"panel-row-style\">
                         <div class=\"col-md-12\">
                             <div class=\"so-panel widget widget-testimonials panel-first-child panel-last-child\">
                                 <div class=\"testimonial grey-wrap\">
-                                    <h2 class=\"widget-title\">Testimonials</h2>
+                                    <h2 class=\"widget-title\">";
+        // line 11
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Отзывы"]);
+        echo "</h2>
                                     <div class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"false\">
                                         <div class=\"carousel-inner\" role=\"listbox\">
                                             <div class=\"item active\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-xs-12  col-sm-12\">
+                                                        <blockquote>
+                                                            <p class=\"testimonial__quote\">
+                                                                We've had a lot of financial troubles over the
+                                                                years; loss of physical health, job and
+                                                                bankruptcy. Laura's coaching gave us hope and a
+                                                                new sense of vision so we can create our lives
+                                                                together.</p>
+                                                            <cite class=\"testimonial__author\">
+                                                                Anastacia Rockafeller</cite>
+                                                            <div class=\"testimonial__author-description\">
+                                                                Mother of two.</div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=\"item\">
                                                 <div class=\"row\">
                                                     <div class=\"col-xs-12  col-sm-12\">
                                                         <blockquote>
@@ -105,91 +97,25 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
                         </div>
                     </div>
                 </div>
-
-                <!-- ========  // END TESTIMONIALS ======== -->
-
-                <!-- ============================
-                                                                                FAQ SECTION
-                                                                                ============================ -->
-
-                <!-- FAQ TITLE -->
-                <div class=\"panel-grid row m-b\">
-                    <div class=\"col-md-12\">
-                        <div class=\"so-panel widget panel-first-child panel-last-child\" id=\"panel-6-4-0-0\">
-                            <div class=\"text-center panel-widget-style\">
-                                <h3 class=\"widget-title\">Frequently Asked Questions</h3>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- // end FAQ TITLE -->
-                <div class=\"panel-grid row m-b-0\">
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-0-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What can I expect in the first session when I see a
-                                        therapist?</strong>
-                                </p>
-                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
-                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-1-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What are the signs of being abused by partner?</strong>
-                                </p>
-                                <p>Morbi volutpat velit ac sem vulputate sollicitudin. Aliquam tincidunt finibus
-                                    leo, eget suscipit augue eleifend in.&nbsp;Aliquam erat volutpat.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-2-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What can I expect in the first session when I see a
-                                        therapist?</strong>
-                                </p>
-                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
-                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========  // END FAQ SECTION ======== -->
-
-            </article>
+        </article>
     </div>
 </div>
 
 ";
-        // line 144
+        // line 62
         echo "<div class=\"col-xs-12  col-md-3  col-md-pull-9\">
  <div class=\"sidebar\">
         ";
-        // line 146
+        // line 64
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("sidebar/aboutme"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 147
+        // line 65
+        echo "        ";
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("sidebar/insta"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 66
         echo " </div>
 </div>";
     }
@@ -206,7 +132,7 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
 
     public function getDebugInfo()
     {
-        return array (  193 => 147,  189 => 146,  185 => 144,  44 => 4,  40 => 3,  37 => 2,);
+        return array (  119 => 66,  114 => 65,  110 => 64,  106 => 62,  53 => 11,  44 => 4,  40 => 3,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -214,46 +140,35 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
         return new Source("{#THE BLOCK OF MAIN CONTENT#}
 <div class=\"col-xs-12  col-md-9 col-md-push-3\" role=\"main\">
     {% partial 'content/slider'%}
-    <div class=\"content-container\">
+    <div class=\"\">
         <article>
-
-                <div class=\"panel-grid row m-b-lg\">
-                    <div class=\"col-md-6\">
-                        <div class=\"so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child\"
-                            id=\"panel-6-1-0-0\">
-                            <a class=\"banner\" href=\"http://frequently-asked-questions\" target=\"_self\">
-                                <div class=\"banner__title\">
-                                    Privacy Policy</div>
-                                <div class=\"banner__content\">
-                                    Between Doctors and Patients</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class=\"col-md-6\">
-                        <div class=\"so-panel widget widget_pw_banner widget-banner panel-first-child panel-last-child\"
-                            id=\"panel-6-1-1-0\">
-                            <a class=\"banner\" href=\"http://shop\" target=\"_self\">
-                                <div class=\"banner__title\">
-                                    Book Recommendations</div>
-                                <div class=\"banner__content\">
-                                    Couple of Books We Recommend You</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========  // END HIGHLIGHT LINK ======== -->
-
-
-                <div class=\"panel-grid row m-b-lg\">
+            <div class=\"panel-grid row m-b-lg\">
                     <div class=\"panel-row-style\">
                         <div class=\"col-md-12\">
                             <div class=\"so-panel widget widget-testimonials panel-first-child panel-last-child\">
                                 <div class=\"testimonial grey-wrap\">
-                                    <h2 class=\"widget-title\">Testimonials</h2>
+                                    <h2 class=\"widget-title\">{{'Отзывы'|_}}</h2>
                                     <div class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"false\">
                                         <div class=\"carousel-inner\" role=\"listbox\">
                                             <div class=\"item active\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-xs-12  col-sm-12\">
+                                                        <blockquote>
+                                                            <p class=\"testimonial__quote\">
+                                                                We've had a lot of financial troubles over the
+                                                                years; loss of physical health, job and
+                                                                bankruptcy. Laura's coaching gave us hope and a
+                                                                new sense of vision so we can create our lives
+                                                                together.</p>
+                                                            <cite class=\"testimonial__author\">
+                                                                Anastacia Rockafeller</cite>
+                                                            <div class=\"testimonial__author-description\">
+                                                                Mother of two.</div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=\"item\">
                                                 <div class=\"row\">
                                                     <div class=\"col-xs-12  col-sm-12\">
                                                         <blockquote>
@@ -278,78 +193,7 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
                         </div>
                     </div>
                 </div>
-
-                <!-- ========  // END TESTIMONIALS ======== -->
-
-                <!-- ============================
-                                                                                FAQ SECTION
-                                                                                ============================ -->
-
-                <!-- FAQ TITLE -->
-                <div class=\"panel-grid row m-b\">
-                    <div class=\"col-md-12\">
-                        <div class=\"so-panel widget panel-first-child panel-last-child\" id=\"panel-6-4-0-0\">
-                            <div class=\"text-center panel-widget-style\">
-                                <h3 class=\"widget-title\">Frequently Asked Questions</h3>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- // end FAQ TITLE -->
-                <div class=\"panel-grid row m-b-0\">
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-0-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What can I expect in the first session when I see a
-                                        therapist?</strong>
-                                </p>
-                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
-                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-1-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What are the signs of being abused by partner?</strong>
-                                </p>
-                                <p>Morbi volutpat velit ac sem vulputate sollicitudin. Aliquam tincidunt finibus
-                                    leo, eget suscipit augue eleifend in.&nbsp;Aliquam erat volutpat.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"col-md-4\">
-                        <div class=\"so-panel widget widget_black_studio_tinymce panel-first-child panel-last-child\"
-                            id=\"panel-6-5-2-0\">
-                            <div class=\"textwidget\">
-                                <p>
-                                    <strong>What can I expect in the first session when I see a
-                                        therapist?</strong>
-                                </p>
-                                <p>Aliquam erat volutpat. Morbi volutpat velit ac sem vulputate sollicitudin.
-                                    Aliquam tincidunt finibus leo, eget suscipit augue eleifend in.</p>
-                                <p>
-                                    <a class=\"read-more\" href=\"faq.html\">Read more</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========  // END FAQ SECTION ======== -->
-
-            </article>
+        </article>
     </div>
 </div>
 
@@ -357,6 +201,7 @@ class __TwigTemplate_61e7cadb6873d908d4eeaa33796b2b417c5d074b1942cf09bfe702e79b3
 <div class=\"col-xs-12  col-md-3  col-md-pull-9\">
  <div class=\"sidebar\">
         {% partial 'sidebar/aboutme' %}
+        {% partial 'sidebar/insta' %}
  </div>
 </div>", "/shared/httpd/psycholog/htdocs/themes/tarana/pages/home-page.htm", "");
     }

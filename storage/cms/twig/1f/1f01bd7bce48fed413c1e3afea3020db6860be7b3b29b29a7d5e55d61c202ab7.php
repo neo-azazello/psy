@@ -133,22 +133,41 @@ class __TwigTemplate_0ba877fb7b71571e4a4775dc7e00eaa4cc5c11e452982802fac8b792df1
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Услуги"]);
         echo "</a>
                             <ul class=\"sub-menu\">
-                                <li class=\"menu-item\">
-                                    <a href=\"#\">XXXX</a>
-                                </li>
-                            </ul>
+                                ";
+        // line 43
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["services"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["service"]) {
+            // line 44
+            echo "                                    <li class=\"menu-item\">
+                                        <a href=\"/";
+            // line 45
+            echo twig_escape_filter($this->env, ($context["SelectedLanguage"] ?? null), "html", null, true);
+            echo "/services/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "slug", [], "any", false, false, false, 45), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "title", [], "any", false, false, false, 45), "html", null, true);
+            echo "</a>
+                                    </li>
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['service'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 48
+        echo "                            </ul>
                         </li>
                         
                         <li class=\"menu-item ";
-        // line 49
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 49), "id", [], "any", false, false, false, 49) == "media")) {
+        // line 51
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 51), "id", [], "any", false, false, false, 51) == "media")) {
             echo " ";
             echo twig_escape_filter($this->env, ($context["current"] ?? null), "html", null, true);
             echo " ";
         }
         echo "\">
                             <a href=\"/";
-        // line 50
+        // line 52
         echo twig_escape_filter($this->env, ($context["SelectedLanguage"] ?? null), "html", null, true);
         echo "/media\">";
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Медия"]);
@@ -156,15 +175,15 @@ class __TwigTemplate_0ba877fb7b71571e4a4775dc7e00eaa4cc5c11e452982802fac8b792df1
                         </li>
                         
                         <li class=\"menu-item ";
-        // line 53
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 53), "id", [], "any", false, false, false, 53) == "contact")) {
+        // line 55
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 55), "id", [], "any", false, false, false, 55) == "contact")) {
             echo " ";
             echo twig_escape_filter($this->env, ($context["current"] ?? null), "html", null, true);
             echo " ";
         }
         echo "\">
                             <a href=\"/";
-        // line 54
+        // line 56
         echo twig_escape_filter($this->env, ($context["SelectedLanguage"] ?? null), "html", null, true);
         echo "/contact\">";
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Связаться"]);
@@ -191,7 +210,7 @@ class __TwigTemplate_0ba877fb7b71571e4a4775dc7e00eaa4cc5c11e452982802fac8b792df1
 
     public function getDebugInfo()
     {
-        return array (  168 => 54,  160 => 53,  152 => 50,  144 => 49,  131 => 41,  123 => 40,  115 => 37,  107 => 36,  99 => 33,  91 => 32,  83 => 29,  75 => 28,  51 => 9,  47 => 8,  39 => 2,  37 => 1,);
+        return array (  187 => 56,  179 => 55,  171 => 52,  163 => 51,  158 => 48,  145 => 45,  142 => 44,  138 => 43,  131 => 41,  123 => 40,  115 => 37,  107 => 36,  99 => 33,  91 => 32,  83 => 29,  75 => 28,  51 => 9,  47 => 8,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -238,9 +257,11 @@ class __TwigTemplate_0ba877fb7b71571e4a4775dc7e00eaa4cc5c11e452982802fac8b792df1
                         <li class=\"menu-item {% if this.page.id == 'services' %} {{current}} {% endif %} menu-item-has-children\">
                             <a href=\"/{{SelectedLanguage}}/services\">{{'Услуги'|_}}</a>
                             <ul class=\"sub-menu\">
-                                <li class=\"menu-item\">
-                                    <a href=\"#\">XXXX</a>
-                                </li>
+                                {% for service in services%}
+                                    <li class=\"menu-item\">
+                                        <a href=\"/{{SelectedLanguage}}/services/{{service.slug}}\">{{service.title}}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </li>
                         

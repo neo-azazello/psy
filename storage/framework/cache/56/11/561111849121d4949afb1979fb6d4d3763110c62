@@ -1,4 +1,4 @@
-1572775657a:1:{s:8:"base.htm";a:6:{s:8:"fileName";s:8:"base.htm";s:7:"content";s:528:"description = "Base layout"
+1573480863a:1:{s:8:"base.htm";a:6:{s:8:"fileName";s:8:"base.htm";s:7:"content";s:528:"description = "Base layout"
 ==
 <?php
 use RainLab\Translate\Classes\Translator;

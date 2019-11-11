@@ -44,8 +44,32 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
                 <div class=\"row\">
                     <div class=\"col-xs-12  col-md-4\">
                         <div class=\"widget  widget_text\">
+                            <div class=\"textwidget\">
+                                <p>Консультации проводятся в Каспиан Плаза, в Центре Психологии, а также онлайн. <strong>Конфедициальность гарантирована!</strong> Методы c которыми я работаю: aрт-терапия, гештальт-терапия, когнитивная терапия, бихевиорально-поведенческая терапия, НЛП, психоанализ и тд.</p>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class=\"col-xs-12  col-md-4\">
+                        <div class=\"widget  widget_text\">
                             <h6 class=\"footer-top__headings\">";
-        // line 11
+        // line 18
+        echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Контактный номер"]);
+        echo "</h6>
+                            <div class=\"textwidget\">
+                                <a class=\"btn  btn-danger  btn-rounded\" href=\"tel:0775144204\" target=\"_self\">
+                                    <i class=\"fa fa-phone\"></i> 077 514 42 04
+                                </a>
+                                
+                                <a class=\"btn  btn-success  btn-rounded\" href=\"https://wa.me/+994775144204/?text=Здравствуйте\"  target=\"_self\">
+                                    <i class=\"fa fa-whatsapp\"></i> Написать мне в WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"col-xs-12  col-md-4\">
+                        <div class=\"widget  widget_text\">
+                            <h6 class=\"footer-top__headings\">";
+        // line 32
         echo call_user_func_array($this->env->getFilter('_')->getCallable(), ["Социальные сети"]);
         echo "</h6>
                             <div class=\"textwidget\">
@@ -63,16 +87,7 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
                             </div>
                         </div>
                     </div>
-                    <div class=\"col-xs-12  col-md-4\">
-                        <div class=\"widget  widget_text\">
-                            <h6 class=\"footer-top__headings\">Contact</h6>
-                            <div class=\"textwidget\">
-                                <a class=\"btn  btn-danger  btn-rounded\" href=\"tel:18881234567\" target=\"_self\">
-                                    <i class=\"fa fa-phone\"></i> 1-888-123-4567
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -82,7 +97,7 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
                 
                 <div class=\"footer-bottom__left\">
                     <img src=\"";
-        // line 45
+        // line 57
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo.png");
         echo "\" alt=\"Tarana Arif\" class=\"footer_logo\">
                 </div>
@@ -105,32 +120,32 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
     </footer>
 
     <script type=\"text/javascript\" src=\"";
-        // line 65
+        // line 77
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.min.js");
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 66
+        // line 78
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 67
+        // line 79
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/picturefill.min.js");
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 68
+        // line 80
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/magnific-popup.js");
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 69
+        // line 81
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
     
     ";
-        // line 71
+        // line 83
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework'.($_minify ? '-min' : '').'.js"></script>'.PHP_EOL;
         unset($_minify);
-        // line 72
+        // line 84
         echo "    ";
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
@@ -142,7 +157,7 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 73
+        // line 85
         echo "
 </body>
 </html>";
@@ -160,7 +175,7 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
 
     public function getDebugInfo()
     {
-        return array (  146 => 73,  134 => 72,  130 => 71,  125 => 69,  121 => 68,  117 => 67,  113 => 66,  109 => 65,  86 => 45,  49 => 11,  37 => 1,);
+        return array (  161 => 85,  149 => 84,  145 => 83,  140 => 81,  136 => 80,  132 => 79,  128 => 78,  124 => 77,  101 => 57,  73 => 32,  56 => 18,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +188,27 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
         <div class=\"footer-top\">
             <div class=\"container  footer-top__divider\">
                 <div class=\"row\">
+                    <div class=\"col-xs-12  col-md-4\">
+                        <div class=\"widget  widget_text\">
+                            <div class=\"textwidget\">
+                                <p>Консультации проводятся в Каспиан Плаза, в Центре Психологии, а также онлайн. <strong>Конфедициальность гарантирована!</strong> Методы c которыми я работаю: aрт-терапия, гештальт-терапия, когнитивная терапия, бихевиорально-поведенческая терапия, НЛП, психоанализ и тд.</p>
+                            </div>
+                        </div>
+                    </div>                
+                    <div class=\"col-xs-12  col-md-4\">
+                        <div class=\"widget  widget_text\">
+                            <h6 class=\"footer-top__headings\">{{'Контактный номер'|_}}</h6>
+                            <div class=\"textwidget\">
+                                <a class=\"btn  btn-danger  btn-rounded\" href=\"tel:0775144204\" target=\"_self\">
+                                    <i class=\"fa fa-phone\"></i> 077 514 42 04
+                                </a>
+                                
+                                <a class=\"btn  btn-success  btn-rounded\" href=\"https://wa.me/+994775144204/?text=Здравствуйте\"  target=\"_self\">
+                                    <i class=\"fa fa-whatsapp\"></i> Написать мне в WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class=\"col-xs-12  col-md-4\">
                         <div class=\"widget  widget_text\">
                             <h6 class=\"footer-top__headings\">{{'Социальные сети'|_}}</h6>
@@ -191,16 +227,7 @@ class __TwigTemplate_0fd260ccd530e4cb2517773f05aea692eb3b4b1368af08af11b933a8b97
                             </div>
                         </div>
                     </div>
-                    <div class=\"col-xs-12  col-md-4\">
-                        <div class=\"widget  widget_text\">
-                            <h6 class=\"footer-top__headings\">Contact</h6>
-                            <div class=\"textwidget\">
-                                <a class=\"btn  btn-danger  btn-rounded\" href=\"tel:18881234567\" target=\"_self\">
-                                    <i class=\"fa fa-phone\"></i> 1-888-123-4567
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

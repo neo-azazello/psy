@@ -1,0 +1,23 @@
+{% extends 'main.twig' %}
+
+{% block page %}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    
+    {% include 'components/slider.twig' %}
+    
+    <div class="">
+        <article>
+            {% include 'components/feedback.twig'%}
+        </article>
+    </div>
+
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+ <div class="sidebar">
+        {% include 'sidebars/aboutme.twig' %}
+        {% include 'sidebars/insta.twig' %}
+ </div>
+</div>
+{% endblock %}

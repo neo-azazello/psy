@@ -1,0 +1,41 @@
+{% extends 'main.twig' %}
+
+{% block page %}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+<div class="content-container">
+
+    <div class="main-title">
+        <h1 class="main-title__primary">{{lang.about_me_page_title}}</h1>
+        <h3 class="main-title__secondary">{{lang.about_me_page_desc}}</h3>
+    </div>
+
+        <div class="panel-grid row m-b-0">
+            <div class="col-md-6 panel-grid-cell">
+                <div class="textwidget">
+                    <p>Наджафова Тарана Ариф родилась 2 декабря 1977 в Баку. Окончила МИП факультет психолога консультанта и коучинга.Имеет музыкальное образование. Работала учительницей в школе. В данный момент работает в Центре Психологии. Сертифицированный специалист. Занимается проблемами: 1)семейных конфликтов 2)любовной зависимости 3)страхи и тревоги 4)проблемы в отношениях 5)неуверенность в себе и проблемы в самооценке</p>
+                </div>
+            </div>
+       
+            <div class="col-md-6 panel-grid-cell">
+                <div class="textwidget">
+                    <p>
+                    {# <img class="alignnone size-full" src="{{ 'tarana/working_with_patient.jpg'|media}}" width="850" height="480"> #}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+        {% include 'components/certificates.twig' %}
+
+</div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+ <div class="sidebar">
+ {% include 'sidebars/insta.twig' %}
+  {% include 'sidebars/messenger.twig' %}
+  </div>
+</div>
+{% endblock %}

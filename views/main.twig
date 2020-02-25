@@ -1,0 +1,11 @@
+{% include 'include/header.twig' %}
+    {% include 'include/topbar.twig' %}
+        {% include 'include/mainmenu.twig' %}
+        
+        <div class="container">
+            <div class="row">  
+                {% block page %}{% endblock %}
+            </div>
+        </div>
+ 
+{% include 'include/footer.twig' %}

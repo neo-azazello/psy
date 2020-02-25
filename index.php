@@ -1,48 +1,23 @@
 <?php
-/**
- * October - The PHP platform that gets back to basics.
- *
- * @package  October
- * @author   Alexey Bobkov, Samuel Georges
- */
 
-/*
-|--------------------------------------------------------------------------
-| Register composer
-|--------------------------------------------------------------------------
-|
-| Composer provides a generated class loader for the application.
-|
-*/
+date_default_timezone_set('Asia/Baku');
+//require the main Slim 3 Framework file and dependency files
 
-require __DIR__.'/bootstrap/autoload.php';
+require __DIR__ . "/vendor/autoload.php";
 
-/*
-|--------------------------------------------------------------------------
-| Load framework
-|--------------------------------------------------------------------------
-|
-| This bootstraps the framework and loads up this application.
-|
-*/
+//Starting new session in aour application
+session_start();
 
-$app = require_once __DIR__.'/bootstrap/app.php';
+//load Slim 3 settings
+$settings = require __DIR__ . "/config/settings.php";
 
-/*
-|--------------------------------------------------------------------------
-| Process request
-|--------------------------------------------------------------------------
-|
-| Execute the request and send the response back to the client.
-|
-*/
+//Instantiate Slim Framework instance. 
+$app = new \Slim\App($settings);
 
-$kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+//Adding dependencies
+require __DIR__ . "/config/init.php";
 
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
-);
+//require the routing file
+require __DIR__ . "/config/routes.php";
 
-$response->send();
-
-$kernel->terminate($request, $response);
+$app->run();

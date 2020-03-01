@@ -14866,13 +14866,11 @@ section {
 }
 
 .imageedit {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    background: white;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
     color: green !important;
     cursor: pointer;
 }
+
+.table tr:first-child td {
+    border-top: 0;
+}
+

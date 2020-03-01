@@ -33,15 +33,72 @@ class AdminController extends Controller
         return $response->withRedirect($this->router->pathFor('admin.' . $request->getParam('posttype')));
     }
 
-    public function getDashboard(Request $request, Response $response)
+    public function serviceImageUpdateModal(Request $request, Response $response)
     {
-        if (!$_SESSION['user']) {
-            $this->flash->addMessage('error', 'please_auth_to_continue');
-            return $response->withRedirect($this->router->pathFor('admin.login'));
+        $posttype = $request->getParam('posttype');
+        $imageid = $request->getParam('imageid');
+
+        $args['image'] = $this->container->db->table('images')->where(array(
+            'imageid' => $imageid,
+            'pagetype' => $posttype,
+        ))->first();
+
+        return $this->container->view->render($response, 'admin/inc/modals/imageedit.twig', $args);
+
+    }
+
+    public function serviceImageUpdateModalUpdate(Request $request, Response $response)
+    {
+
+        $posttype = $request->getParam('posttype');
+        $imageid = $request->getParam('imageid');
+        $imageorder = $request->getParam('imageorder');
+
+        //var_dump($request->getUploadedFiles()['imagename']->getClientFilename());die();
+
+        if (!empty($request->getUploadedFiles()['imagename']->getClientFilename())) {
+
+            $image_file = $request->getUploadedFiles()['imagename'];
+            $image_name = $request->getUploadedFiles()['imagename']->getClientFilename();
+            $image_type = $request->getUploadedFiles()['imagename']->getClientMediaType();
+            $image_size = $request->getUploadedFiles()['imagename']->getSize();
+
+            $image_status = $this->container->post->imageProsessing($image_file, $image_name, $image_type, $image_size);
+
+            if ($image_status == false) {
+                return $response->withRedirect($this->router->pathFor($posttype));
+            }
+        } else {
+
+            $getimage = $this->container->db->table('images')->where(array(
+                'posttype' => $posttype,
+                'imageid' => $imageid,
+            ))->first();
+
+            $image_status = $getimage->imagename;
         }
 
-        return $this->container->view->render($response, '/admin/pages/dashboard.twig');
+        $data = array(
+            'imagename' => $image_status,
+            'posttype' => $posttype,
+            'imageorder' => $imageorder,
+        );
 
+        $result = $this->container->db->table('images')->where(array(
+            'posttype' => $posttype,
+            'imageid' => $imageid,
+        ))->update($data);
+
+        $this->flash->addMessage('success', 'Image has been updated successfully!');
+        return $response->withRedirect($this->router->pathFor($posttype));
+    }
+
+
+
+
+    public function getDashboard(Request $request, Response $response)
+    {
+        return $this->container->view->render($response, '/admin/pages/dashboard.twig');
     }
 
     public function getAboutMe(Request $request, Response $response)
@@ -73,6 +130,11 @@ class AdminController extends Controller
             return $response->withRedirect($this->router->pathFor('admin.aboutme'));
         }
 
+    }
+
+    public function getMedia(Request $request, Response $response){
+        $args['certs'] = $this->container->db->table('images')->where('pagetype', 'aboutme')->get();
+        return $this->container->view->render($response, '/admin/pages/media.twig', $args);
     }
 
 }

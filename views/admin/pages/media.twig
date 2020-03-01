@@ -17,7 +17,7 @@
 
 <div class="row m-t-10">
     
-    <div class="col-lg-8">
+    <div class="col-lg-12">
             <div class="card">
             <form action="{{path_for('admin.aboutme')}}" method="post" enctype="multipart/form-data">
                 
@@ -133,54 +133,6 @@
                     </div>
                 </div>
             </form>
-        </div>
-    </div>
-    
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-header">
-                Загруженные<strong class="card-title pl-2">Сертификаты</strong>
-            </div>
-            <div class="card-body">
-            {% if certs is not empty %}
-            <table class="table">
-                <tbody>
-                {% for cert in certs %}
-                <tr>
-                <td><img src="{{base_url()}}/uploads/{{cert.imagename}}"></td>
-                <td style="font-size: 12px;">{{cert.imagedesc}}</td>
-                <td>
-                    <a href="#" data-href="{{base_url()}}/admin/imagedelete/aboutme/{{cert.imageid}}"
-                    data-toggle="modal" data-target="#confirm-delete" class="delete_file">
-                        <button> <i class="fa fa-times"></i></button>
-                    </a>
-                </td>
-                <td>
-                    <button onclick="editImage('aboutme', {{cert.imageid}})" class="imageedit" title="Редактировать фото">
-                        <i class="fa fa-pencil-square"></i>
-                    </button>
-                </td>
-                </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            {% else %}
-                <p class="no-photo">Нет загруженных фото!</p>
-            {% endif %}
-                <hr>
-                <div class="card-text text-sm-center">
-                    <form id="form" method="post" action="{{path_for('image.uploader')}}" enctype="multipart/form-data">
-                    <input type="text" name="imagedesc" class="form-control m-b-15" placeholder="Добавьте описание">
-
-                        <label for="file-upload" class="btn btn-danger btn-sm">
-                            Выберите фото чтобы загрузить
-                        </label>
-                    
-                    <input type="file" id="file-upload" name="imagename">
-                    <input type="hidden" name="posttype" value="aboutme">
-              </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>

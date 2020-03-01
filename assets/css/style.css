@@ -12880,6 +12880,18 @@ body.modal-open {
 }
 
 
+.aboutme_splash {
+  background: url(http://psy.loc/uploads/tarana_aboutme.jpg);
+  background-repeat: no-repeat;
+  height: 400px;
+  margin: 0 auto;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+
 /*------------------------------------*\
 	The End :)
 \*------------------------------------*/

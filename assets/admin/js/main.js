@@ -1807,7 +1807,7 @@ function updateSlide(postid) {
 //Loading Education modal for editing - ok
 function editImage(posttype, imageid) {
 
-  $.get('../panel/loadimage/?posttype=' + posttype + "&imageid=" + imageid,
+  $.get('../admin/loadimage/?posttype=' + posttype + "&imageid=" + imageid,
 
     function (data) {
       $("#modalImageEdit").remove();

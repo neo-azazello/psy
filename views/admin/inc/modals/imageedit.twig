@@ -1,0 +1,61 @@
+<div class="modal fade" id="modalImageEdit" tabindex="-1" role="dialog" aria-labelledby="showIconLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+    <form action="{{path_for('imageupdate')}}" method="post" enctype="multipart/form-data">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="showIconLabel">Редактирование фото</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group ">
+                                <label for="company" class=" form-control-label">Cортировка</label>
+                                <input type="number" 
+                                    class="form-control"
+                                    name="imageorder"
+                                    value="{{image.imageorder}}">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group ">
+                                <label for="company" class=" form-control-label">Описание</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="imagedesc"
+                                    value="{{image.imagedesc}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file-upload">
+
+                        <div class="image-upload-wrap" {% if image %} style="display:none;" {% endif %}>
+                            <input class="file-upload-input" type='file' name="imagename" onchange="readURL(this);" accept="image/*">
+                            <div class="drag-text">
+                            <h3>Нажмите чтобы выбрать фото</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-content" {% if image %} style="display:block;" {% endif %}>
+                            <img class="file-upload-image" src="{% if image %}{{base_url()}}/uploads/{{image.imagename}}{% else %}#{% endif %}" alt="your image" />
+                            <div class="image-title-wrap">
+                            <button type="button" onclick="removeUpload()" class="btn btn-danger">Удалить <span class="image-title">загруженное фото</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <input type="hidden" name="posttype" value="{{image.posttype}}">
+                    <input type="hidden" name="imageid" value="{{image.imageid}}">
+
+            </div>
+            <div class="modal-footer">
+                <b class="btn btn-secondary" data-dismiss="modal">Закрыть</b>
+                <button type="submit" class="btn btn-primary">Обновить</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>

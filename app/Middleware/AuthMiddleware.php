@@ -9,7 +9,7 @@ class AuthMiddleware extends Middleware
     {
 
         if (!$this->container->auth->check()) {
-            return $response->withRedirect($this->container->router->pathFor('auth.signin'));
+            return $response->withRedirect($this->container->router->pathFor('admin.login'));
         }
 
         $response = $next($request, $response);

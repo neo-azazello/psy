@@ -1,11 +1,18 @@
+
 <div class="widget  widget-about-us">
     <div id="carousel-people-pw_about_us-2" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                {# <img class="about-us__image" src="{{ 'tarana/at_wotk.jpg'|media }}" alt=""> #}
-                <h5 class="about-us__name">{{lang.my_name}}</h5>
-                <p class="about-us__description">{{lang.description}} </p>
-                <a href="/aboutme" class="read-more  about-us__link">{{lang.read_more}}</a>
+                <img class="about-us__image" src="{{base_url()}}/uploads/{{aboutbox.pageimage}}" alt="">
+                <h5 class="about-us__name">
+                    {% if lang.lang == 'az' %} {{aboutbox.pagetitle_az}} {% endif %}
+                    {% if lang.lang == 'ru' %} {{aboutbox.pagetitle_ru}} {% endif %}
+                </h5>
+                <p class="about-us__description">
+                    {% if lang.lang == 'az' %} {{aboutbox.shorttext_az}} {% endif %}
+                    {% if lang.lang == 'ru' %} {{aboutbox.shorttext_ru}} {% endif %}
+                </p>
+                <a href="{{path_for('aboutme')}}" class="read-more  about-us__link">{{lang.read_more}}</a>
             </div>
         </div>
     </div>

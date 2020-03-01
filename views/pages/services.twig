@@ -4,32 +4,38 @@
 
 {#THE BLOCK OF MAIN CONTENT#}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
-    <div class="latest-posts">
-        <div class="row">       
-            {% for post in posts %}
-
-                <div class="col-xs-12 col-md-4">
-                    <div class="latest-post">
-                        <a class="latest-post__thumbnail" href="/services/{{ post.slug }}">
-                            <img width="270" height="190" src="{{ post.image}}" class="attachment-latest-posts size-latest-posts wp-post-image">
-                        </a>
-                        
-                        <div class="latest-post__categories">
-                            <ul class="post-categories">
-                                <li>{{ this.page.title }}</li>
-                            </ul>
-                        </div>
-                        
-                        <h4 class="latest-post__title">
-                            <a href="/services/{{ post.slug }}">{{ post.title }} </a>
-                        </h4>
-                        <div class="latest-post__excerpt"> {{ post.introductory|raw }} </div>
-                    </div>
-                </div>
-
-            {% endfor %}
+    <div class="content-container woocommerce">
+    
+        <div class="main-title">
+            <h1 class="main-title__primary">{{lang.my_services}}</h1>
         </div>
-    </div>   
+        
+        <div class="latest-posts">
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col-xs-12 col-md-4">
+                        <div class="latest-post">
+                            <a class="latest-post__thumbnail" href="/service/{{ post.pageslug }}">
+                                <img width="270" height="190" src="/uploads/{{ post.pageimage}}" class="attachment-latest-posts size-latest-posts wp-post-image">
+                            </a>
+                            
+                        
+                            <h4 class="latest-post__title">
+                                <a href="/service/{{ post.pageslug }}">
+                                    {% if lang.lang == 'az' %} {{ post.pagetitle_az }} {% endif %}
+                                    {% if lang.lang == 'ru' %} {{ post.pagetitle_ru }} {% endif %}
+                                </a>
+                            </h4>
+                            <div class="latest-post__excerpt"> 
+                                    {% if lang.lang == 'az' %} {{ post.shorttext_az }} {% endif %}
+                                    {% if lang.lang == 'ru' %} {{ post.shorttext_ru }} {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>   
+    </div>
 </div>
 
 {#THE BLOCK OF SIDEBAR#}

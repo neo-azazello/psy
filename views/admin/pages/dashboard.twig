@@ -1,0 +1,64 @@
+{% extends 'admin/main.twig' %}
+{% block admincontent %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Menu settings</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-md-12">
+        {% include 'include/flash.twig' %} 
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-lg-12">
+            <div class="card">
+            <form action="" method="post" enctype="multipart/form-data">
+                
+                <div class="card-header">
+                    <strong>Menu</strong> hierarchy
+                </div>
+
+                <div class="card-body card-block">
+                    <div class="vue-lists">
+                        <ul>
+                        {% for m in menu %}
+                            <li class="parentli">
+                                <span>{{lang[m.menuname]}}</span>
+                                <span class="float-right">
+                                    <label class="switch switch-3d switch-success mr-3 sm" >
+                                        <input type="checkbox" class="switch-input" {% if m.status == 'active' %}checked="true" {% endif %}>
+                                        <span class="switch-label" onclick="updateMenu({{m.menuid}})"></span>
+                                        <span class="switch-handle" onclick="updateMenu({{m.menuid}})"></span>
+                                    </label>
+                                </span>
+                            {% for s in submenu %}
+                                {% if m.menuid == s.menusub %}
+                                <li class="issub">
+                                <span>{{lang[s.menuname]}}</span>
+                                    <span class="float-right">
+                                        <label class="switch switch-3d switch-success mr-3 sm">
+                                        <input type="checkbox" class="switch-input" {% if s.status == 'active' %}checked="true" {% endif %}>
+                                        <span class="switch-label" onclick="updateMenu({{s.menuid}})"></span>
+                                        <span class="switch-handle" onclick="updateMenu({{s.menuid}})"></span>
+                                    </label>
+                                </span>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                            </li>
+                        {% endfor %}
+                        <ul>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

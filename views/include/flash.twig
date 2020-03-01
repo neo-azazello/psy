@@ -1,0 +1,25 @@
+{% if flash.getMessage('error') %}
+
+<div class="alert alert-icon alert-danger" role="alert">
+  <i class="fe fe-alert-triangle mr-2" aria-hidden="true"></i> {{ lang[flash.getMessage('error') | first]}}
+</div>
+
+{% endif %}
+
+{% if flash.getMessage('success') %}
+
+<div class="alert alert-icon alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"></button>
+  <i class="fe fe-check mr-2" aria-hidden="true"></i> {{ lang[flash.getMessage('success') | first]}}
+</div>
+
+{% endif %}
+
+{% if flash.getMessage('info') %}
+
+<div class="alert alert-icon alert-primary alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"></button>
+  <i class="fe fe-bell mr-2" aria-hidden="true"></i> {{ lang[flash.getMessage('info') | first]}}
+</div>
+
+{% endif %}

@@ -1,0 +1,138 @@
+ <li {% if is_current_path('dashboard') %} class="active"{% endif %}>
+    <a href="{{path_for('dashboard')}}">
+        <i class="fas fa-home"></i>Главная страница
+    </a>
+</li>
+
+ <li {% if is_current_path('admin.aboutme') %} class="active"{% endif %}>
+    <a href="{{path_for('admin.aboutme')}}">
+        <i class="fas fa-user"></i>Обо мне
+    </a>
+</li>
+
+
+                
+                {# 
+                <li class="has-sub">
+                    <a class="js-arrow " href="#">
+                        <i class="fas fa-tachometer-alt"></i>Home page settings
+                    </a>
+                    
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" {% if is_current_path('headcontacts') or is_current_path('slider') or is_current_path('threeboxes') or is_current_path('clients') or is_current_path('welcomeblock') %} style="display:block;" {% endif %}>
+                        <li {% if is_current_path('headcontacts') %} class="active"{% endif %}>
+                            <a href="{{path_for('headcontacts')}}">Header Contacts</a>
+                        </li>
+                        <li {% if is_current_path('slider') %} class="active"{% endif %}>
+                            <a href="{{path_for('slider')}}">Slider Settings</a>
+                        </li>
+                        <li {% if is_current_path('threeboxes') %} class="active"{% endif %}> 
+                            <a href="{{path_for('threeboxes')}}">3 Boxes</a>
+                        </li>
+                        <li {% if is_current_path('welcomeblock') %} class="active"{% endif %}>
+                            <a href="{{path_for('welcomeblock')}}">Welcome block</a>
+                        </li>
+                        <li {% if is_current_path('clients') %} class="active"{% endif %}>
+                            <a href="{{path_for('clients')}}">Our clients</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+                <li class=" has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-info-circle"></i>About-us page settings
+                    </a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" {% if is_current_path('companyprofile') or is_current_path('companypolicy') %} style="display:block;" {% endif %}>
+                        <li {% if is_current_path('companyprofile') %} class="active"{% endif %}>
+                            <a href="{{path_for('companyprofile')}}">Company profile</a>
+                            </li>
+                        <li {% if is_current_path('companypolicy') %} class="active"{% endif %}>
+                            <a href="{{path_for('companypolicy')}}">Company policy</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+                <li {% if is_current_path('roadsafety') %} class="active"{% endif %}>
+                    <a href="{{path_for('roadsafety')}}">
+                        <i class="fas fa-road"></i>Road safety settings
+                    </a>
+                </li>
+
+                
+                <li class=" has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-globe"></i>Service page settings
+                    </a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" 
+                        {% if is_current_path('passtransportation') or 
+                              is_current_path('schoolbus') or
+                              is_current_path('coachservice') or 
+                              is_current_path('airporttransfer') or 
+                              is_current_path('cargo') or 
+                              is_current_path('transportationmngt') or 
+                              is_current_path('dispatch') or 
+                              is_current_path('driverservice') or 
+                              is_current_path('rentacar') or 
+                              is_current_path('laborservice')
+                        %} 
+                            style="display:block;" 
+                        {% endif %}>
+                        <li {% if is_current_path('passtransportation') %} class="active"{% endif %}>
+                            <a href="{{path_for('passtransportation')}}">Passenger transportation</a>
+                        </li>
+                        <li {% if is_current_path('schoolbus') %} class="active"{% endif %}>
+                            <a href="{{path_for('schoolbus')}}">School bus service</a>
+                        </li>
+                        <li {% if is_current_path('coachservice') %} class="active"{% endif %}>
+                            <a href="{{path_for('coachservice')}}">Minibus and coach service</a>
+                        </li>
+                        <li {% if is_current_path('airporttransfer') %} class="active"{% endif %}>
+                            <a href="{{path_for('airporttransfer')}}">Airport transfer</a>
+                        </li>
+                        <li {% if is_current_path('cargo') %} class="active"{% endif %}>
+                            <a href="{{path_for('cargo')}}">Cargo transportation</a>
+                        </li>
+                        <li {% if is_current_path('transportationmngt') %} class="active"{% endif %}>
+                            <a href="{{path_for('transportationmngt')}}">Transportation Management</a>
+                        </li>
+                        <li {% if is_current_path('dispatch') %} class="active"{% endif %}>
+                            <a href="{{path_for('dispatch')}}">Dispatch service</a>
+                        </li>
+                        <li {% if is_current_path('driverservice') %} class="active"{% endif %}>
+                            <a href="{{path_for('driverservice')}}">Driver services</a>
+                        </li>
+                        <li {% if is_current_path('rentacar') %} class="active"{% endif %}>
+                            <a href="{{path_for('rentacar')}}">Vehicle rent</a>
+                        </li>
+                        <li {% if is_current_path('laborservice') %} class="active"{% endif %}>
+                            <a href="{{path_for('laborservice')}}">Labor service</a>
+                        </li>
+                    </ul>
+                </li>
+                
+               
+                <li class=" has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-truck"></i>Fleet page settings
+                    </a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" {% if is_current_path('fleetdrivers') or is_current_path('fleetvehicles') or is_current_path('fleetmanagement') %} style="display:block;" {% endif %}>
+                        <li {% if is_current_path('fleetdrivers') %} class="active"{% endif %}>
+                            <a href="{{path_for('fleetdrivers')}}">Drivers</a>
+                        </li>
+                        <li {% if is_current_path('fleetvehicles') %} class="active"{% endif %}>
+                            <a href="{{path_for('fleetvehicles')}}">Vehicles</a>
+                        </li>
+                        <li {% if is_current_path('fleetmanagement') %} class="active"{% endif %}>
+                            <a href="{{path_for('fleetmanagement')}}">Fleet management</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                
+                <li {% if is_current_path('contactpage') %} class="active"{% endif %}>
+                    <a href="{{path_for('contactpage')}}">
+                        <i class="fas fa-phone-square"></i>Contact page settings
+                    </a>
+                </li>
+                #}

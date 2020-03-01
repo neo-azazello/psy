@@ -13,10 +13,8 @@
         <div class="panel-grid row m-b-0">
             <div class="col-md-4 panel-grid-cell">
                 <div class="textwidget">
-                    <h5>Центр Психологии</h5>
-                    <p>Тарана Ариф
-                        <br>44 Джафар Джаббарлы улица
-                        <br>Caspina Plaza, 4-ый этаж</p>
+                    <h5>{{lang.psy_center}}</h5>
+                    <p>{{lang.my_name}} {{lang.address|raw}}</p>
                     <p>(+994) 77 514 42 04
                         <br>(+994) 12 987 65 43
                         <br><a href="mailto:help@psycholog.az">help@psycholog.az</a></p>
@@ -25,12 +23,11 @@
 
             <div class="col-md-8 panel-grid-cell">      
                 <div class="textwidget">
-                    <div role="form" lang="en-US" dir="ltr">   
+                {% include 'include/flash.twig' %} 
+                <br>
+                    <div role="form" lang="en-US" dir="ltr"> 
+                     
                         <form action="" method="post">
-
-                            <div id="forms_flash"></div>
-
-
                             <div class="row">
                                 
                                 <div class="col-xs-12  col-sm-6">

@@ -1,0 +1,176 @@
+{% extends 'admin/main.twig' %}
+{% block admincontent %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Обо мне</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-md-12">
+        {% include 'include/flash.twig' %} 
+    </div>
+</div>
+
+<div class="row m-t-10">
+    
+    <div class="col-lg-8">
+            <div class="card">
+            <form action="{{path_for('admin.aboutme')}}" method="post" enctype="multipart/form-data">
+                
+                <div class="card-header">
+                   Форма <strong>редактирования</strong>
+                </div>
+
+                <div class="card-body card-block">
+
+                    <div class="file-upload">
+
+                        <div class="image-upload-wrap" {% if aboutme.pageimage %} style="display:none;" {% endif %}>
+                            <input class="file-upload-input" type='file' name="pageimage" onchange="readURL(this);" accept="image/*" disabled>
+                            <div class="drag-text">
+                            <h3>Перетащите или нажмите чтобы выбрать фото</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="file-upload-content" {% if aboutme.pageimage %} style="display:block;" {% endif %}>
+                            <img class="file-upload-image" src="{% if aboutme.pageimage %}{{base_url()}}/uploads/{{aboutme.pageimage}}{% else %}#{% endif %}" alt="your image" />
+                            <div class="image-title-wrap">
+                            <button type="button" onclick="removeUpload()" class="btn btn-danger" id="postimage" disabled>Удалить это фото</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                        <ul class="nav nav-tabs m-t-20" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">На Русском</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">На Азербайджанском</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="myTabContent">
+                        
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="form-group m-t-20">
+                                    <label for="company" class=" form-control-label">Заглавье на 
+                                    <strong>Русском</strong></label>
+                                    <input type="text" 
+                                            class="form-control" 
+                                            name="pagetitle_ru"
+                                            value="{{aboutme.pagetitle_ru}}"
+                                            disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-mobile" class=" form-control-label">Боковой текст на 
+                                    <strong>Русском</strong></label>
+                                    <textarea name="shorttext_ru" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{aboutme.shorttext_ru}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-mobile" class=" form-control-label">Основной текст на 
+                                    <strong>Русском</strong></label>
+                                    <textarea name="text_ru" 
+                                            id="russian" 
+                                            rows="6" 
+                                            class="form-control summernote"
+                                            disabled>{{aboutme.text_ru}}</textarea>
+                                </div>
+
+                            </div>
+                        
+                        
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="form-group  m-t-20">
+                                    <label for="company" class=" form-control-label">Заглавье на 
+                                    <strong>Азербайджанском</strong></label>
+                                    <input type="text"  
+                                        class="form-control" 
+                                        name="pagetitle_az"
+                                        value="{{aboutme.pagetitle_az}}"
+                                        disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-mobile" class=" form-control-label">Боковой текст на 
+                                    <strong>Азербайджанском</strong></label>
+                                    <textarea name="shorttext_az" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{aboutme.shorttext_az}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-landline" class=" form-control-label">Основной текст на <strong>Азербайджанском</strong></label>
+                                    <textarea name="text_az" 
+                                            id="azeri" 
+                                            rows="6" 
+                                            class="form-control summernote"
+                                            disabled>{{aboutme.text_az}}</textarea>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        
+
+                </div>
+                
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm" id="updateprofile" disabled>
+                        <i class="fa fa-dot-circle-o"></i> Сохранить
+                    </button>
+                    <div class="btn btn-danger btn-sm editcancel" id="editcancel"> 
+                        <i class="fa fa-ban"></i> Отменить
+                    </div>
+                    <div class="btn btn-success btn-sm editprofile" id="editprofile">
+                        <i class="fa fa-edit"></i> Редактировать
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                Загруженные<strong class="card-title pl-2">Сертификаты</strong>
+            </div>
+            <div class="card-body">
+            {% if certs is not empty %}
+                {% for cert in certs %}
+                    <div class="service_image" style="background:url({{base_url()}}/uploads/{{cert.imagename}}) no-repeat center center;">
+                        <a href="#" data-href="{{base_url()}}/admin/imagedelete/aboutme/{{cert.imageid}}" data-toggle="modal" data-target="#confirm-delete" class="delete_file imagedelete" title="Delete this image">
+                            <i class="fa  fa-times"></i>
+                        </a>
+                        <b onclick="editImage('airporttransfer', {{cert.imageid}})" class="imageedit" title="Edit this image">
+                            <i class="fa fa-pencil-square"></i>
+                        </b> 
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="no-photo">No photo uploaded!</p>
+            {% endif %}
+                <hr>
+                <div class="card-text text-sm-center">
+                    <form id="form" method="post" action="{{path_for('image.uploader')}}" enctype="multipart/form-data">
+                    <input type="text" name="imagedesc" class="form-control m-b-15" placeholder="Добавьте описание">
+
+                        <label for="file-upload" class="btn btn-danger btn-sm">
+                            Выберите фото чтобы загрузить
+                        </label>
+                    
+                    <input type="file" id="file-upload" name="imagename">
+                    <input type="hidden" name="posttype" value="aboutme">
+              </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

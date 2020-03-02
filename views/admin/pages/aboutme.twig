@@ -147,7 +147,7 @@
                 <tbody>
                 {% for cert in certs %}
                 <tr>
-                <td><img src="{{base_url()}}/uploads/{{cert.imagename}}"></td>
+                <td><img src="{{base_url()}}/uploads/{{cert.imagename}}" width="70px"></td>
                 <td style="font-size: 12px;">{{cert.imagedesc}}</td>
                 <td>
                     <a href="#" data-href="{{base_url()}}/admin/imagedelete/aboutme/{{cert.imageid}}"
@@ -170,13 +170,13 @@
                 <hr>
                 <div class="card-text text-sm-center">
                     <form id="form" method="post" action="{{path_for('image.uploader')}}" enctype="multipart/form-data">
-                    <input type="text" name="imagedesc" class="form-control m-b-15" placeholder="Добавьте описание">
+                    <input type="text" name="imagedesc" id="message" class="form-control m-b-15" placeholder="Добавьте описание">
 
                         <label for="file-upload" class="btn btn-danger btn-sm">
                             Выберите фото чтобы загрузить
                         </label>
                     
-                    <input type="file" id="file-upload" name="imagename">
+                    <input type="file" id="file-upload" name="imagename" class="sendButton">
                     <input type="hidden" name="posttype" value="aboutme">
               </form>
                 </div>

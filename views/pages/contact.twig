@@ -13,17 +13,14 @@
         <div class="panel-grid row m-b-0">
             <div class="col-md-4 panel-grid-cell">
                 <div class="textwidget">
-                    <h5>{{lang.psy_center}}</h5>
-                    <p>{{lang.my_name}} {{lang.address|raw}}</p>
-                    <p>(+994) 77 514 42 04
-                        <br>(+994) 12 987 65 43
-                        <br><a href="mailto:help@psycholog.az">help@psycholog.az</a></p>
+                    {{contacts.work_address|raw|nl2br}}
+                    <br><a href="mailto:help@psycholog.az">help@psycholog.az</a>
                 </div>
             </div>
 
-            <div class="col-md-8 panel-grid-cell">      
+            <div class="col-md-8 panel-grid-cell"> 
                 <div class="textwidget">
-                {% include 'include/flash.twig' %} 
+                    {% include 'include/flash.twig' %} 
                 <br>
                     <div role="form" lang="en-US" dir="ltr"> 
                      

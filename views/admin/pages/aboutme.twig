@@ -140,6 +140,13 @@
         <div class="card">
             <div class="card-header">
                 Загруженные<strong class="card-title pl-2">Сертификаты</strong>
+                <span class="float-right">
+                    <label class="switch switch-3d switch-success mr-3 sm" >
+                        <input type="checkbox" class="switch-input" {% if m.status == 'active' %}checked="true" {% endif %}>
+                        <span class="switch-label" onclick="updateImageStatus('aboutme')"></span>
+                        <span class="switch-handle" onclick="updateImageStatus('aboutme')"></span>
+                    </label>
+                </span>
             </div>
             <div class="card-body">
             {% if certs is not empty %}

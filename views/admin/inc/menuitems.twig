@@ -4,6 +4,19 @@
     </a>
 </li>
 
+
+<li class="has-sub">
+    <a class="js-arrow " href="#">
+        <i class="fas fa-cog"></i>Общие настройки
+    </a>
+    
+    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" style="display:block;">
+        <li {% if is_current_path('admin.contacts') %} class="active"{% endif %}>
+            <a href="{{path_for('admin.contacts')}}">Контактные данные</a>
+        </li>
+    </ul>
+</li>
+
  <li {% if is_current_path('admin.aboutme') %} class="active"{% endif %}>
     <a href="{{path_for('admin.aboutme')}}">
         <i class="fas fa-user"></i>Обо мне
@@ -19,30 +32,7 @@
 
 
                 
-{# 
-<li class="has-sub">
-    <a class="js-arrow " href="#">
-        <i class="fas fa-tachometer-alt"></i>Home page settings
-    </a>
-    
-    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list" {% if is_current_path('headcontacts') or is_current_path('slider') or is_current_path('threeboxes') or is_current_path('clients') or is_current_path('welcomeblock') %} style="display:block;" {% endif %}>
-        <li {% if is_current_path('headcontacts') %} class="active"{% endif %}>
-            <a href="{{path_for('headcontacts')}}">Header Contacts</a>
-        </li>
-        <li {% if is_current_path('slider') %} class="active"{% endif %}>
-            <a href="{{path_for('slider')}}">Slider Settings</a>
-        </li>
-        <li {% if is_current_path('threeboxes') %} class="active"{% endif %}> 
-            <a href="{{path_for('threeboxes')}}">3 Boxes</a>
-        </li>
-        <li {% if is_current_path('welcomeblock') %} class="active"{% endif %}>
-            <a href="{{path_for('welcomeblock')}}">Welcome block</a>
-        </li>
-        <li {% if is_current_path('clients') %} class="active"{% endif %}>
-            <a href="{{path_for('clients')}}">Our clients</a>
-        </li>
-    </ul>
-</li>#}
+
 
                 
                

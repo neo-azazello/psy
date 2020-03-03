@@ -385,9 +385,8 @@ $(document).ready(function () {
   });
 });
 
-
-function updateMenu(menuid) {
-  $.get('../panel/menustatus/?menuid=' + menuid, function (data) {
+function updateImageStatus(pagetype) {
+  $.get('../admin/imagestatus?pagetype=' + pagetype, function (data) {
 
   });
 

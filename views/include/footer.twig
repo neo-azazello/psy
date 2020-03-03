@@ -9,19 +9,19 @@
                     <div class="col-xs-12  col-md-4">
                         <div class="widget  widget_text">
                             <div class="textwidget">
-                                <p>Консультации проводятся в Каспиан Плаза, в Центре Психологии, а также онлайн. <strong>Конфедициальность гарантирована!</strong> Методы c которыми я работаю: aрт-терапия, гештальт-терапия, когнитивная терапия, бихевиорально-поведенческая терапия, НЛП, психоанализ и тд.</p>
+                                <p>{{contacts.footer_desc}}</p>
                             </div>
                         </div>
-                    </div>                
+                    </div>
                     <div class="col-xs-12  col-md-4">
                         <div class="widget  widget_text">
                             <h6 class="footer-top__headings">{{lang.contact_number}}</h6>
                             <div class="textwidget">
-                                <a class="btn  btn-danger  btn-rounded" href="tel:0775144204" target="_self">
-                                    <i class="fa fa-phone"></i> 077 514 42 04
+                                <a class="btn  btn-danger  btn-rounded" href="tel:{{contacts.mobile}}" target="_self">
+                                    <i class="fa fa-phone"></i> {{contacts.mobile}}
                                 </a>
                                 
-                                <a class="btn  btn-success  btn-rounded" href="https://wa.me/+994775144204/?text=Здравствуйте"  target="_self">
+                                <a class="btn  btn-success  btn-rounded" href="https://api.whatsapp.com/send?phone={{contacts.whatsapp}}&text=Здравствуйте"  target="_self">
                                     <i class="fa fa-whatsapp"></i> {{lang.write_me_in_whatsapp}} 
                                 </a>
                             </div>
@@ -57,19 +57,6 @@
                     <img src="{{base_url()}}/assets/images/logo.png" alt="Tarana Arif" class="footer_logo">
                 </div>
                 
-                <!-- <div class="footer-bottom__right">
-                    <div class="footer-bottom__payment-methods">
-                        <span>PAYMENT METHODS:</span>
-                        &nbsp; &nbsp; &nbsp;
-                        <i class="fa  fa-3x  fa-cc-visa"></i>
-                        &nbsp;
-                        <i class="fa  fa-3x  fa-cc-mastercard"></i>
-                        &nbsp;
-                        <i class="fa  fa-3x  fa-cc-amex"></i>
-                        &nbsp;
-                        <i class="fa  fa-3x  fa-cc-paypal"></i>
-                    </div>
-                </div> -->
             </div>
         </div>
     </footer>

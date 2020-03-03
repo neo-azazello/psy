@@ -65,12 +65,15 @@ class ImageController extends Controller
 
         if (!empty($request->getUploadedFiles()['imagename']->getClientFilename())) {
 
+            $getimage = Image::select('imagename')->where(['imageid' => $imageid])->first();
+            $unliked = unlink($this->dir . DIRECTORY_SEPARATOR . $getimage->imagename);
+
             $image_file = $request->getUploadedFiles()['imagename'];
             $image_name = $request->getUploadedFiles()['imagename']->getClientFilename();
             $image_type = $request->getUploadedFiles()['imagename']->getClientMediaType();
             $image_size = $request->getUploadedFiles()['imagename']->getSize();
 
-            $image_status = $this->container->post->imageProsessing($image_file, $image_name, $image_type, $image_size);
+            $image_status = $this->imageProsessing($image_file, $image_name, $image_type, $image_size);
 
             if ($image_status == false) {
                 $this->flash->addMessage('info', 'nothing_updated');
@@ -101,7 +104,7 @@ class ImageController extends Controller
         $getimage = Image::select('imagename')->where(['imageid' => $id['id']])->first();
         $unliked = unlink($this->dir . DIRECTORY_SEPARATOR . $getimage->imagename);
 
-        if(!$unliked) {
+        if (!$unliked) {
             $this->flash->addMessage('error', 'something_get_wrong!');
             return $response->withRedirect($this->router->pathFor("admin." . $id['posttype']));
         }
@@ -115,9 +118,15 @@ class ImageController extends Controller
 
     }
 
+    // TODO
+    public function imageStatusChange(Request $request, Response $response)
+    {
+        return true;
+    }
+
     /////////////////////////////////// HELPER METHODS ///////////////////////////////////////////////
 
-    private function imageProsessing($image_file, $image_name, $image_type, $image_size)
+    public function imageProsessing($image_file, $image_name, $image_type, $image_size)
     {
 
         if ($image_type !== "image/jpeg" && $image_type !== "image/png") {

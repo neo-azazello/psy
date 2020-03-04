@@ -24,55 +24,98 @@
            <form action="{{path_for('admin.contacts')}}" method="post">
             <div class="card-body card-block">
 
-<div class="row">
-<div class="col-md-6">
-            <div class="form-group">
-                <label for="mobile" class=" form-control-label">Мобильный телефон</label>
-                <input type="text" 
-                       id="mobile" 
-                       name="mobile" 
-                       placeholder="Введите номер телефона" 
-                       class="form-control"
-                       value="{{contact.mobile}}"
-                       required
-                       disabled>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="mobile" class=" form-control-label">Мобильный телефон</label>
+                        <input type="text" 
+                            id="mobile" 
+                            name="mobile" 
+                            placeholder="Введите номер телефона" 
+                            class="form-control"
+                            value="{{contact.mobile}}"
+                            required
+                            disabled>
+                    </div>
+                </div>
+            <div class="col-md-6">           
+                    <div class="form-group">
+                        <label for="whatsapp" class=" form-control-label">WhatsApp номер</label>
+                        <input type="text" 
+                            id="whatsapp" 
+                            name="whatsapp" 
+                            placeholder="Введите номер телефона" 
+                            class="form-control"
+                            value="{{contact.whatsapp}}"
+                            required
+                            disabled>
+                    </div>
+                </div>
             </div>
- </div>
- <div class="col-md-6">           
-            <div class="form-group">
-                <label for="whatsapp" class=" form-control-label">WhatsApp номер</label>
-                <input type="text" 
-                       id="whatsapp" 
-                       name="whatsapp" 
-                       placeholder="Введите номер телефона" 
-                       class="form-control"
-                       value="{{contact.whatsapp}}"
-                       required
-                       disabled>
-            </div>
-</div>
-</div>
 
-<div class="row">
-<div class="col-md-6">
-                <div class="form-group">
-                    <label for="nf-landline" class=" form-control-label">Описание в footer</label>
-                    <textarea name="footer_desc" 
-                            rows="3" 
-                            class="form-control"
-                            disabled>{{contact.footer_desc}}</textarea>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="footer_desc_ru-tab" data-toggle="tab" href="#footer_desc_ru" role="tab" aria-controls="footer_desc_ru" aria-selected="true">Рус</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="footer_desc_az-tab" data-toggle="tab" href="#footer_desc_az" role="tab" aria-controls="footer_desc_az" aria-selected="false">Азе</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="footer_desc_ru" role="tabpanel" aria-labelledby="footer_desc_ru-tab">
+                                <div class="form-group m-t-20">
+                                    <label for="nf-landline" class=" form-control-label">Описание в footer на Русском</label>
+                                    <textarea name="footer_desc_ru" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{contact.footer_desc_ru}}</textarea>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="footer_desc_az" role="tabpanel" aria-labelledby="footer_desc_az-tab">
+                                <div class="form-group m-t-20">
+                                    <label for="nf-landline" class=" form-control-label">Описание в footer на Азербайджанском</label>
+                                    <textarea name="footer_desc_az" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{contact.footer_desc_az}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">  
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="work_address_ru-tab" data-toggle="tab" href="#work_address_ru" role="tab" aria-controls="work_address_ru" aria-selected="true">Рус</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="work_address_az-tab" data-toggle="tab" href="#work_address_az" role="tab" aria-controls="work_address_az" aria-selected="false">Азе</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent2">
+                            <div class="tab-pane fade show active" id="work_address_ru" role="tabpanel" aria-labelledby="work_address_ru-tab">
+                                <div class="form-group m-t-20">
+                                    <label for="nf-landline" class=" form-control-label">Рабочие контакты на Русском</label>
+                                    <textarea name="work_address_ru" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{contact.work_address_ru}}</textarea>
+                                </div>
+                            </div>
+                           <div class="tab-pane fade" id="work_address_az" role="tabpanel" aria-labelledby="work_address_az-tab">
+                                <div class="form-group m-t-20">
+                                    <label for="nf-landline" class=" form-control-label">Рабочие контакты на Азербайджанском</label>
+                                    <textarea name="work_address_az" 
+                                            rows="3" 
+                                            class="form-control"
+                                            disabled>{{contact.work_address_az}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
- </div>
- <div class="col-md-6">  
-                <div class="form-group">
-                    <label for="nf-landline" class=" form-control-label">Рабочие контакты</label>
-                    <textarea name="work_address" 
-                            rows="3" 
-                            class="form-control"
-                            disabled>{{contact.work_address}}</textarea>
-                </div>
-</div>
-</div>
+                
                 <div class="form-group">
                     <label for="nf-landline" class=" form-control-label">Социальные профили</label>
                     <textarea name="social_links" 

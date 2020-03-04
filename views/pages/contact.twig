@@ -13,7 +13,8 @@
         <div class="panel-grid row m-b-0">
             <div class="col-md-4 panel-grid-cell">
                 <div class="textwidget">
-                    {{contacts.work_address|raw|nl2br}}
+                    {% if lang.lang == 'az' %} {{contacts.work_address_az|raw|nl2br}} {% endif %}
+                    {% if lang.lang == 'ru' %} {{contacts.work_address_ru|raw|nl2br}} {% endif %}
                     <br><a href="mailto:help@psycholog.az">help@psycholog.az</a>
                 </div>
             </div>

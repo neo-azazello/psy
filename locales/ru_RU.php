@@ -35,4 +35,5 @@ return [
     'invalid_creds' => 'Введены неверные данные',
     'nothing_updated' => 'Вы ничего не обновили',
     'updated_successfully' => 'Данные обновились успешно',
+    'deleted_successfully' => 'Запись удалился безвозвратно!',
 ];

@@ -30,4 +30,10 @@ return [
     'address' => '<br>44 Cəfər Cabbarlı küç<br>Caspina Plaza',
     'letter_send_successfully' => 'Məktub uğurla göndərilmişdir',
     'interesting_videos' => 'Maraqlı videolar',
+    'you_signed_out_successfully' => 'Вы успешно вышли из системы',
+    'please_auth_to_continue' => 'Пожалуйста авторизируйтесь чтобы продолжить',
+    'invalid_creds' => 'Введены неверные данные',
+    'nothing_updated' => 'Вы ничего не обновили',
+    'updated_successfully' => 'Данные обновились успешно',
+    'deleted_successfully' => 'Запись удалился безвозвратно!',
 ];

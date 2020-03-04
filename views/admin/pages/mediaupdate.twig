@@ -1,0 +1,76 @@
+{% extends 'admin/main.twig' %}
+{% block admincontent %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Редактировать видео</h2>
+            <a href="{{path_for('admin.media')}}">Назад к списку →</a>
+        </div>
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-md-12">
+        {% include 'include/flash.twig' %} 
+    </div>
+</div>
+
+<div class="row m-t-10">
+<div class="col-lg-12">
+        <div class="card">
+        
+        <form action="{{path_for('admin.updatemedia')}}" method="post">
+            
+            <div class="card-header">
+                Форма <strong>редактирование</strong>
+            </div>
+
+            <div class="card-body card-block">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label for="company" class=" form-control-label">Название видео</label>
+                            <input type="text" 
+                                placeholder="Введите название" 
+                                class="form-control"
+                                name="videoname"
+                                value="{{media.videoname}}"
+                                required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="company" class=" form-control-label">Длительность видео (в секундах)</label>
+                            <input type="text" 
+                                placeholder="Введите длительность в секундах" 
+                                class="form-control" 
+                                name="duration"
+                                value="{{toSeconds(media.duration)}}"
+                                required>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <div class="form-group">
+                        <label for="company" class=" form-control-label">Ссылка из YouTube</label>
+                        <input type="text" 
+                               placeholder="Линк видео на YouTube" 
+                               class="form-control" 
+                               name="videoid"
+                               value="https://www.youtube.com/watch?v={{media.videoid}}"
+                               required>
+                    </div>
+                <input type="hidden" name="id" value="{{media.id}}">
+            </div>
+            
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="fa fa-dot-circle-o"></i> Обновить
+                </button>
+            </div>
+        </form>
+     </div>
+</div>
+ </div>
+{% endblock %}

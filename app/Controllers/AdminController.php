@@ -25,8 +25,10 @@ class AdminController extends Controller
         $this->container->db->table('contacts')->update([
             'mobile' => $request->getParam('mobile'),
             'whatsapp' => $request->getParam('whatsapp'),
-            'footer_desc' => $request->getParam('footer_desc'),
-            'work_address' => $request->getParam('work_address'),
+            'footer_desc_ru' => $request->getParam('footer_desc_ru'),
+            'footer_desc_az' => $request->getParam('footer_desc_az'),
+            'work_address_ru' => $request->getParam('work_address_ru'),
+            'work_address_az' => $request->getParam('work_address_az'),
             'social_links' => $request->getParam('social_links'),
         ]);
         

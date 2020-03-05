@@ -30,19 +30,13 @@
                         <li class="menu-item {% if is_current_path('aboutme') %}  current-menu-item {% endif %}">
                             <a href="/aboutme">{{ lang.about_me }}</a>
                         </li>
-                        
-                       {#<li class="menu-item {% if this.page.id == 'programs' %} {{current}} {% endif %}">
-                           <a href="/{{SelectedLanguage}}/programs">{{ 'Программы'}}</a>
-                       </li> #}
                        
                         <li class="menu-item {% if 'service' in url %} current-menu-item {% endif %} menu-item-has-children">
                             <a href="/services">{{lang.my_services}}</a>
                             <ul class="sub-menu">
-                                {% for service in services %}
-                                    <li class="menu-item">
-                                        <a href="/services/{{service.slug}}">{{service.title}}</a>
-                                    </li>
-                                {% endfor %}
+                                <li class="menu-item">
+                                    <a href="/services/prices">{{lang.service_price}}</a>
+                                </li>
                             </ul>
                         </li>
                         

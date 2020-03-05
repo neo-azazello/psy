@@ -36,4 +36,5 @@ return [
     'nothing_updated' => 'Вы ничего не обновили',
     'updated_successfully' => 'Данные обновились успешно',
     'deleted_successfully' => 'Запись удалился безвозвратно!',
+    'service_price' => 'Прайс-лист',
 ];

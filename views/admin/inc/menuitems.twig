@@ -23,9 +23,16 @@
     </a>
 </li>
 
+
  <li {% if is_current_path('admin.media') %} class="active"{% endif %}>
     <a href="{{path_for('admin.media')}}">
         <i class="fas fa-video"></i>Видеофайлы
+    </a>
+</li>
+
+ <li {% if is_current_path('admin.service') %} class="active"{% endif %}>
+    <a href="{{path_for('admin.service')}}">
+        <i class="fas fa-heartbeat"></i>Все услуги
     </a>
 </li>
 

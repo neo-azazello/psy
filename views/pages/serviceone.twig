@@ -1,0 +1,48 @@
+{% extends 'main.twig' %}
+
+{% block page %}
+
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container woocommerce">
+
+<div class="main-title">
+    <h1 class="main-title__primary">
+        {% if lang.lang == 'az' %} {{ post.pagetitle_az }} {% endif %}
+        {% if lang.lang == 'ru' %} {{ post.pagetitle_ru }} {% endif %}
+    </h1>
+</div>
+    
+<div>  
+    <div class="panel-grid row m-b-0">
+            
+            <div class="col-md-12 panel-grid-cell">
+                <div class="textwidget">
+                    <p>
+                        <img class="alignnone size-full" src="/uploads/{{ post.pageimage}}" width="850" height="480">
+                    </p>    
+                </div>
+            </div>
+
+            <div class="col-md-12 panel-grid-cell">
+                <div class="textwidget">
+                    {% if lang.lang == 'az' %} {{ post.text_az|raw }} {% endif %}
+                    {% if lang.lang == 'ru' %} {{ post.text_ru|raw }} {% endif %}
+                </div>
+            </div>
+            
+
+        </div>
+</div>
+
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+            {% include 'sidebars/aboutme.twig' %}
+     </div>
+</div>
+
+{% endblock %}

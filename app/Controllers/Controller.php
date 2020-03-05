@@ -26,21 +26,39 @@ class Controller
 
     public function save(Request $request)
     {
+        $slug = date_timestamp_get(date_create());
+
+        if (!empty($request->getUploadedFiles()['pageimage']->getClientFilename())) {
+            $image_file = $request->getUploadedFiles()['pageimage'];
+            $image_name = $request->getUploadedFiles()['pageimage']->getClientFilename();
+            $image_type = $request->getUploadedFiles()['pageimage']->getClientMediaType();
+            $image_size = $request->getUploadedFiles()['pageimage']->getSize();
+
+            $image_status = $this->container->ImageController
+                ->imageProsessing($image_file, $image_name, $image_type, $image_size);
+
+            if ($image_status == false) {
+                return false;
+            }
+        }
+
         return Page::create([
             'pagetype' => $request->getParam('pagetype'),
+            'pageslug' => $slug,
             'pagetitle_ru' => $request->getParam('pagetitle_ru'),
             'pagetitle_az' => $request->getParam('pagetitle_az'),
             'shorttext_ru' => $request->getParam('shorttext_ru'),
             'shorttext_az' => $request->getParam('shorttext_az'),
             'text_ru' => $request->getParam('text_ru'),
             'text_az' => $request->getParam('text_az'),
-            'pageimage' => $request->getParam('pageimage'),
+            'pageimage' => $image_status,
             'pagestatus' => 'published',
         ]);
     }
 
     public function update(Request $request, array $where)
     {
+        
         $getimage = Page::select('pageimage')->where($where)->first();
 
         if (!empty($request->getUploadedFiles()['pageimage']->getClientFilename())) {

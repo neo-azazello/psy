@@ -394,8 +394,8 @@ function updateImageStatus(pagetype) {
 
 }
 
-function updateSlide(postid) {
-  $.get('../panel/slider/status/?postid=' + postid, function (data) {
+function updateSlide(pageid) {
+  $.get('../admin/addtoslider?pageid=' + pageid, function (data) {
 
   });
 

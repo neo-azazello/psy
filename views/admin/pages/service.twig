@@ -1,0 +1,72 @@
+{% extends 'admin/main.twig' %}
+{% block admincontent %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Все услуги </h2>
+            <a href="{{path_for('admin.addservice')}}">
+                <button class="btn btn-success item">
+                    <i class="zmdi zmdi-plus-circle"></i> Добавить
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-md-12">
+        {% include 'include/flash.twig' %} 
+    </div>
+</div>
+
+<div class="row m-t-10">
+    
+    <div class="col-lg-12">
+        <div class="table-responsive table--no-card m-b-40">
+            <table class="table table-borderless table-striped table-earning">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Действия</th>
+                        <th>Показать на слайде?</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                {% for k, service in services %}
+                <tr >
+                    <td>{{service.pageid}}</td>
+                    <td>{{service.pagetitle_ru}}</td>
+                    <td>
+                    <div class="table-data-feature">
+                        <a href="{{base_url()}}/admin/service/edit/{{service.pageid}}">
+                            <button class="item">
+                                <i class="zmdi zmdi-edit"></i>
+                            </button>
+                        </a>
+
+                        <a href="#" data-href="{{base_url()}}/admin/service/delete/{{service.pageid}}" data-toggle="modal" data-target="#confirm-delete" class="delete-button">
+                            <button class="item">
+                                <i class="zmdi zmdi-delete"></i>
+                            </button>
+                        </a>
+                    </div>
+                    </td>
+                    <td>
+                    
+                    <label class="switch switch-3d switch-success mr-3 sm">
+                        <input type="checkbox" class="switch-input" 
+                        {% if service.pageid == slides[k].pageid %}checked="true" {% endif %}>
+                        <span class="switch-label" onclick="updateSlide({{service.pageid}})"></span>
+                        <span class="switch-handle" onclick="updateSlide({{service.pageid}})"></span>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

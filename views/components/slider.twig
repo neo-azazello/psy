@@ -1,22 +1,22 @@
 <div class="jumbotron  jumbotron--with-captions">
     <div class="carousel  slide  fade" id="headerCarousel" data-ride="carousel" data-interval="5000">
         <div class="carousel-inner">
-            
-            {# {% for slide in slides %}
-                <div class="item active">
-                <img src="{{'slider/'|media}}/{{slide.slideimage}}"
-                    srcset="{{'slider/'|media}}/{{slide.slideimage}} 425w, {{'slider/'|media}}/{{slide.slideimage}} 850w"
+
+            {% for k, slide in slides %}
+                <div class="item {% if k == 0 %} active {% endif %}">
+                <img src="{{base_url()}}/uploads/{{slide.pageimage}}"
+                    srcset="{{base_url()}}/uploads/{{slide.pageimage}} 425w, {{base_url()}}/uploads/{{slide.pageimage}} 850w"
                     sizes="(min-width: 768px) 720px, (min-width: 992px) 700px, (min-width: 1200px) 850px, calc(100vw-20px)">
                 <div class="jumbotron-content">
                     <h1 class="jumbotron-content__title">
-                     <a href="/{{SelectedLanguage}}{{slide.slideurl}}">
-                        {% if SelectedLanguage == 'az' %} {{slide.slidename_az}} {% endif %}
-                        {% if SelectedLanguage == 'ru' %} {{slide.slidename_ru}}{% endif %}
+                     <a href="/service/{{slide.pageslug}}">
+                        {% if lang.lang == 'az' %} {{slide.pagetitle_az}} {% endif %}
+                        {% if lang.lang == 'ru' %} {{slide.pagetitle_ru}}{% endif %}
                      </a>
                     </h1>
                 </div>
             </div>
-            {% endfor %} #}
+            {% endfor %}
             
         </div>
         <a class="left  jumbotron__control" href="#headerCarousel" role="button" data-slide="prev">

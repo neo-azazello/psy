@@ -11,6 +11,11 @@ class PageController extends Controller
     public function getHomePage(Request $request, Response $response)
     {
         $args['lang'] = $this->container->lang;
+        $args['slides'] = $this->container->db
+            ->table('slider')
+            ->select('pages.pagetitle_az', 'pages.pagetitle_ru', 'pages.pageslug', 'pages.pageimage')
+            ->join('pages', 'slider.pageid', '=', 'pages.pageid')
+            ->get();
         return $this->container->view->render($response, 'pages/homepage.twig', $args);
     }
 
@@ -34,6 +39,13 @@ class PageController extends Controller
             ->get();
         $args['lang'] = $this->container->lang;
         return $this->container->view->render($response, 'pages/services.twig', $args);
+    }
+
+    public function getOneService(Request $request, Response $response, $args)
+    {
+        $args['post'] = $this->container->db->table('pages')->where('pageslug', $args['slug'])->first();
+        $args['lang'] = $this->container->lang;
+        return $this->container->view->render($response, 'pages/serviceone.twig', $args);
     }
 
     public function getMediaPage(Request $request, Response $response)

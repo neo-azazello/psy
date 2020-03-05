@@ -7127,7 +7127,7 @@ html.flexbox .page-box--inline .page-box__title {
     padding: 30px 30px 27px 30px;
     position: absolute;
     width: 370px;
-    background-color: rgba(250, 250, 250, 0.65);
+    background-color: rgba(250, 250, 250, 0.92);
     box-shadow: 0 2px 3px 0 rgba(31, 31, 31, 0.05);
   }
 }
@@ -7160,7 +7160,7 @@ html.flexbox .page-box--inline .page-box__title {
 .jumbotron__control {
   position: absolute;
   z-index: 2;
-  background-color: rgba(250, 250, 250, 0.65);
+  background-color: rgba(250, 250, 250, 0.92);
   box-shadow: 0 2px 3px 0 rgba(31, 31, 31, 0.05);
   color: #676b6f;
   text-align: center;
@@ -7266,7 +7266,7 @@ html.flexbox .page-box--inline .page-box__title {
 
 @media (min-width: 992px) {
   .jumbotron-content {
-    background-color: rgba(250, 250, 250, 0.65);
+    background-color: rgba(250, 250, 250, 0.92);
   }
 
   .jumbotron-content:hover {

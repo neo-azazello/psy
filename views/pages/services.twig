@@ -1,8 +1,13 @@
 {% extends 'main.twig' %}
 
-{% block page %}
+{% block title %}
+    <title>{{lang.my_services}} - psycholog.az</title>  
+    <meta name="author" content="{{lang.my_name}}">
+    <meta name="description" content="{{lang.site_description}}">
+    <meta name="keywords" content="{{lang.site_tags}}">
+{% endblock %}
 
-{#THE BLOCK OF MAIN CONTENT#}
+{% block page %}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
     <div class="content-container woocommerce">
     

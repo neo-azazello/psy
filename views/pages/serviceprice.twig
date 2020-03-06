@@ -1,0 +1,74 @@
+{% extends 'main.twig' %}
+
+{% block title %}
+    <title>{{lang.price_list_title}} - psycholog.az</title>  
+    <meta name="author" content="{{lang.my_name}}">
+    <meta name="description" content="{{lang.site_description}}">
+    <meta name="keywords" content="{{lang.site_tags}}">
+{% endblock %}
+
+{% block page %}
+
+{#THE BLOCK OF MAIN CONTENT#}
+<div class="col-xs-12  col-md-9 col-md-push-3" role="main">
+    <div class="content-container woocommerce">
+
+<div class="main-title">
+    <h1 class="main-title__primary">
+        {{lang.price_list_title}}
+    </h1>
+</div>
+    
+<div>  
+    <div class="panel-grid row m-b-0">
+            
+            <div class="col-md-12 panel-grid-cell" style="margin-bottom:20px">
+                <div class="textwidget">
+                    {% if lang.lang == 'az' %} {{ intro.intro_az|raw|nl2br }} {% endif %}
+                    {% if lang.lang == 'ru' %} {{ intro.intro_ru|raw|nl2br }} {% endif %}
+                </div>
+            </div>
+
+            <div class="col-md-12 panel-grid-cell">
+                <div class="table-responsive ">
+                {% for k, pr in prices %}
+                    <table class="table table-bordered">
+                        <thead class="price-thead">
+                            <tr>
+                                <td colspan="2">
+                                    {% if lang.lang == 'ru' %}{{k}}{% endif %}
+                                    {% if lang.lang == 'az' %}{{pr[0].group_az}}{% endif %}
+                                </td>  
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in pr %}
+                                <tr>
+                                    <td style="width:80%">
+                                        {% if lang.lang == 'ru' %}{{p.name_ru}}{% endif %}
+                                        {% if lang.lang == 'az' %}{{p.name_az}}{% endif %}
+                                    </td>
+                                    <td class="text-right" style="width:20%">{{p.price}} <strong>₼</strong></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% endfor %}                  
+                </div>
+            </div>
+            
+
+        </div>
+</div>
+
+    </div>
+</div>
+
+{#THE BLOCK OF SIDEBAR#}
+<div class="col-xs-12  col-md-3  col-md-pull-9">
+     <div class="sidebar">
+            {% include 'sidebars/aboutme.twig' %}
+     </div>
+</div>
+
+{% endblock %}

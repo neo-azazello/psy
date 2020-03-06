@@ -1,0 +1,222 @@
+{% extends 'admin/main.twig' %}
+{% block admincontent %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="overview-wrap">
+            <h2 class="title-1">Прайс лист услуг</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-md-12">
+        {% include 'include/flash.twig' %} 
+    </div>
+</div>
+
+<div class="row m-t-10">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                Форма <strong>Редактирования</strong>
+            </div>
+           <form action="" method="post">
+            <div class="card-body card-block">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="intro_ru-tab" data-toggle="tab" href="#intro_ru" role="tab" aria-controls="intro_ru" aria-selected="true">Рус</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="intro_az-tab" data-toggle="tab" href="#intro_az" role="tab" aria-controls="intro_az" aria-selected="false">Азе</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="intro_ru" role="tabpanel" aria-labelledby="intro_ru-tab">
+                            <div class="form-group m-t-20">
+                                <label for="nf-landline" class=" form-control-label">Вводный текст на Русском</label>
+                                <textarea name="intro_ru" 
+                                        rows="3" 
+                                        class="form-control"
+                                        disabled>{{intro.intro_ru}}</textarea>
+                            </div>
+
+
+                        </div>
+                        
+                        <div class="tab-pane fade" id="intro_az" role="tabpanel" aria-labelledby="intro_az-tab">
+                            <div class="form-group m-t-20">
+                                <label for="nf-landline" class=" form-control-label">Вводный текст на Азербайджанском</label>
+                                <textarea name="intro_az" 
+                                        rows="3" 
+                                        class="form-control"
+                                        disabled>{{intro.intro_az}}</textarea>
+                            </div>
+
+
+                        </div>
+                    </div>
+                
+                <div id="buildyourform">
+                {% if price is not empty %}
+                    {% for k, p in price %}
+                    <div class="row pricerow">
+                        <div class="col-md-9">                  
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Группа</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="group_ru[]"
+                                            required
+                                            value="{{p.group_ru}}"
+                                            disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Группа</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="group_az[]"
+                                            required
+                                            value="{{p.group_az}}"
+                                            disabled>
+                                    </div>
+                                </div>                            
+                                
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Описание Рус</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="name_ru[]"
+                                            value="{{p.name_ru}}"
+                                            required
+                                            disabled>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Описание Азе</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="name_az[]"
+                                            value="{{p.name_az}}"
+                                            required
+                                            disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2">
+                            <div class="form-group ">
+                                <label for="company" class=" form-control-label">Цена</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="price[]"
+                                    value="{{p.price}}"
+                                    required
+                                    disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 text-center">
+                                <label for="company" class=" form-control-label">Удалить</label>
+                                <input class="form-check-input"  type="checkbox" name="delete[{{k}}]" value="{{k}}">
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="row pricerow">
+                        <div class="col-md-9">                  
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Группа</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="group_ru[]"
+                                            disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Группа</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="group_az[]"
+                                            disabled>
+                                    </div>
+                                </div>                            
+                                
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Описание Рус</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="name_ru[]"
+                                            disabled>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <label for="company" class=" form-control-label">Описание Азе</label>
+                                        <input type="text" 
+                                            class="form-control"
+                                            name="name_az[]"
+                                            disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2">
+                            <div class="form-group ">
+                                <label for="company" class=" form-control-label">Цена</label>
+                                <input type="text" 
+                                    class="form-control"
+                                    name="price[]"
+                                    disabled>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 text-center">
+                                <label for="company" class=" form-control-label">Удалить</label>
+                                <input class="form-check-input"  type="checkbox" name="delete[0]" value="0">
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+                
+                <div class="add btn btn-success" id="add" > Новая строка </div>
+
+
+
+
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary btn-sm" id="updateprofile" disabled>
+                    <i class="fa fa-dot-circle-o"></i> Сохранить
+                </button>
+                <div class="btn btn-danger btn-sm editcancel" id="editcancel"> 
+                    <i class="fa fa-ban"></i> Отменить
+                </div>
+                <div class="btn btn-success btn-sm editprofile" id="editprofile">
+                    <i class="fa fa-edit"></i> Редактировать
+                </div>
+            </div>
+         </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+{% if certs is not empty %}
 <div class="panel-grid row m-b-0 certificates"> 
     <div class="header">
       <h2>{{lang.my_certificates}}</h2>
@@ -5,7 +6,7 @@
 
     <div class="card-columns lightbox">
         {% for cert in certs %}
-            <a href="{{base_url()}}/uploads/{{cert.imagename}}">
+            <a href="{{base_url()}}/uploads/{{cert.imagename}}" title="{{cert.imagedesc}}">
                 <div class="card">
                 <img src="{{base_url()}}/uploads/{{cert.imagename}}">
                 </div>
@@ -13,3 +14,4 @@
         {% endfor %}
     </div>    
 </div>
+{% endif %}

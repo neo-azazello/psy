@@ -1,8 +1,28 @@
 {% extends 'main.twig' %}
 
-{% block page %}
+{% block title %}
+    <title>{% if lang.lang == 'az' %} {{ post.pagetitle_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.pagetitle_ru }} {% endif %} - psycholog.az</title>  
+    <meta name="author" content="{{lang.my_name}}">
+    <meta name="description" content="{% if lang.lang == 'az' %} {{ post.shorttext_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.shorttext_ru }} {% endif %}">
+    <meta name="keywords" content="{{lang.site_tags}}">
 
-{#THE BLOCK OF MAIN CONTENT#}
+
+    <meta name="twitter:site" content="https://psycholog.az">
+    <meta name="twitter:creator" content="{{lang.my_name}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if lang.lang == 'az' %} {{ post.pagetitle_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.pagetitle_ru }} {% endif %}">
+    <meta name="twitter:description" content="{% if lang.lang == 'az' %} {{ post.shorttext_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.shorttext_ru }} {% endif %}">
+    <meta name="twitter:image" content="{{ base_url() }}/uploads/{{ post.pageimage}}">
+
+    <meta property="og:url" content="{{ base_url() }}/service/{{ post.pageslug }}">
+    <meta property="og:title" content="{% if lang.lang == 'az' %} {{ post.pagetitle_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.pagetitle_ru }} {% endif %}">
+    <meta property="og:description" content="{% if lang.lang == 'az' %} {{ post.shorttext_az }} {% endif %}{% if lang.lang == 'ru' %} {{ post.shorttext_ru }} {% endif %}">
+    <meta property="og:image" content="{{ base_url() }}/uploads/{{ post.pageimage}}">
+    <meta property="og:image:secure_url" content="{{ base_url() }}/uploads/{{ post.pageimage}}">
+
+{% endblock %}
+
+{% block page %}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
     <div class="content-container woocommerce">
 
@@ -29,6 +49,10 @@
                     {% if lang.lang == 'az' %} {{ post.text_az|raw }} {% endif %}
                     {% if lang.lang == 'ru' %} {{ post.text_ru|raw }} {% endif %}
                 </div>
+
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
             </div>
             
 

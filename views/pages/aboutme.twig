@@ -1,5 +1,12 @@
 {% extends 'main.twig' %}
 
+{% block title %}
+    <title>{{lang.about_me_page_title}} - psycholog.az</title>  
+    <meta name="author" content="{{lang.my_name}}">
+    <meta name="description" content="{{lang.site_description}} {{lang.about_me_page_desc}}">
+    <meta name="keywords" content="{{lang.site_tags}}">
+{% endblock %}
+
 {% block page %}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
 <div class="content-container">

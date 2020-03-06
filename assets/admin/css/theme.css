@@ -14874,3 +14874,8 @@ section {
     border-top: 0;
 }
 
+.pricerow {
+    border-top: 1px solid #ebebeb;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

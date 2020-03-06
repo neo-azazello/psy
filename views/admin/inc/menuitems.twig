@@ -36,6 +36,18 @@
     </a>
 </li>
 
+ <li {% if is_current_path('admin.price') %} class="active"{% endif %}>
+    <a href="{{path_for('admin.price')}}">
+        <i class="fas fa-dollar-sign"></i>Прайс-лист
+    </a>
+</li>
+
+ <li {% if is_current_path('admin.feedback') %} class="active"{% endif %}>
+    <a href="{{path_for('admin.feedback')}}">
+        <i class="fas fa-comment-alt"></i>Отзывы
+    </a>
+</li>
+
 
 
                 

@@ -435,3 +435,21 @@ $(document).ready(function () {
       $('.sendButton').attr('disabled', true);
   })
 });
+
+
+$("#add").click(function () {
+  
+  var oldval = $(".form-check-input").last().val();
+
+  $(".pricerow")
+    .last()
+    .clone()
+    .appendTo($("#buildyourform"))
+    .find("input");
+
+  $('.form-check-input').last().val(function (i, oldval) {
+    return ++oldval;
+  });
+
+  return false;
+});

@@ -1,3 +1,5 @@
+
+{% if feedback is not empty %}
 <div class="panel-grid row m-b-lg">
     <div class="panel-row-style">
         <div class="col-md-12">
@@ -6,42 +8,19 @@
                     <h2 class="widget-title">{{lang.feedbacks }}</h2>
                     <div class="carousel slide" data-ride="carousel" data-interval="5000">
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-xs-12  col-sm-12">
-                                        <blockquote>
-                                            <p class="testimonial__quote">
-                                                We've had a lot of financial troubles over the
-                                                years; loss of physical health, job and
-                                                bankruptcy. Laura's coaching gave us hope and a
-                                                new sense of vision so we can create our lives
-                                                together.</p>
-                                            <cite class="testimonial__author">
-                                                Anastacia Rockafeller</cite>
-                                            <div class="testimonial__author-description">
-                                                Mother of two.</div>
-                                        </blockquote>
+                            {% for k, feed in feedback %}
+                                <div class="item {% if k == 0 %}active{% endif %}">
+                                    <div class="row">
+                                        <div class="col-xs-12  col-sm-12">
+                                            <blockquote>
+                                                <p class="testimonial__quote">{{feed.feedbacktext}}</p>
+                                                <cite class="testimonial__author">{{feed.feedbackauthor	}}</cite>
+                                                <div class="testimonial__author-description">{{feed.authortitle}}</div>
+                                            </blockquote>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-12  col-sm-12">
-                                        <blockquote>
-                                            <p class="testimonial__quote">
-                                                We've had a lot of financial troubles over the
-                                                years; loss of physical health, job and
-                                                bankruptcy. Laura's coaching gave us hope and a
-                                                new sense of vision so we can create our lives
-                                                together.</p>
-                                            <cite class="testimonial__author">
-                                                Anastacia Rockafeller</cite>
-                                            <div class="testimonial__author-description">
-                                                Mother of two.</div>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -49,3 +28,4 @@
         </div>
     </div>
 </div>
+{% endif %}

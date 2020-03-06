@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Feedback;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
@@ -16,6 +17,7 @@ class PageController extends Controller
             ->select('pages.pagetitle_az', 'pages.pagetitle_ru', 'pages.pageslug', 'pages.pageimage')
             ->join('pages', 'slider.pageid', '=', 'pages.pageid')
             ->get();
+        $args['feedback'] = Feedback::select()->get();
         return $this->container->view->render($response, 'pages/homepage.twig', $args);
     }
 
@@ -46,6 +48,22 @@ class PageController extends Controller
         $args['post'] = $this->container->db->table('pages')->where('pageslug', $args['slug'])->first();
         $args['lang'] = $this->container->lang;
         return $this->container->view->render($response, 'pages/serviceone.twig', $args);
+    }
+
+    public function getPriceList(Request $request, Response $response)
+    {
+        $result = array();
+        $data = json_decode(json_encode($this->container->db->table('pricelist')->select()->get()->toArray()), true);
+        
+        foreach ($data as $element) {
+            $result[$element['group_ru']][] = $element;
+        }
+
+        $args['lang'] = $this->container->lang;
+        $args['intro'] = $this->container->db->table('priceintro')->select()->first();
+        $args['prices'] = $result;
+        
+        return $this->container->view->render($response, 'pages/serviceprice.twig', $args);
     }
 
     public function getMediaPage(Request $request, Response $response)

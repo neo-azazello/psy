@@ -1,7 +1,13 @@
 {% extends 'main.twig' %}
 
+{% block title %}
+    <title>{{lang.interesting_videos}} - psycholog.az</title>  
+    <meta name="author" content="{{lang.my_name}}">
+    <meta name="description" content="{{lang.site_description}}">
+    <meta name="keywords" content="{{lang.site_tags}}">
+{% endblock %}
+
 {% block page %}
-{#THE BLOCK OF MAIN CONTENT#}
 <div class="col-xs-12  col-md-9 col-md-push-3" role="main">
     <div class="content-container woocommerce">
         
@@ -30,7 +36,8 @@
                                         allowfullscreen></iframe>
                                     </div>
                                 </div>
-                                <div class="modal-footer justify-content-center">
+                                <div class="modal-footer ">
+                                <span class="text-left"><strong>{{video.videoname}}</strong></span>
                                     <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">{{lang.close}}</button>
                                 </div>
                             </div>

@@ -36,6 +36,9 @@ return [
     'nothing_updated' => 'Вы ничего не обновили',
     'updated_successfully' => 'Данные обновились успешно',
     'deleted_successfully' => 'Запись удалился безвозвратно!',
+    'created_successfully' => 'Запись успешно добавлена',
     'service_price' => 'Qiymətlər',
     'price_list_title' => 'Xidmətlərin qiymətləri',
+    'not_found_title' => '404 Xətası',
+    'not_found_text' => 'Belə bir səhifə mövcud deyil və ya silinmişdir. Lütfən əsas səhifəyə keçin.',
 ];

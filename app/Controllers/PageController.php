@@ -39,14 +39,20 @@ class PageController extends Controller
             ->where(['pagetype' => 'service', 'pagestatus' => 'published'])
             ->orderBy('pageid', 'DESC')
             ->get();
+
         $args['lang'] = $this->container->lang;
         return $this->container->view->render($response, 'pages/services.twig', $args);
     }
 
     public function getOneService(Request $request, Response $response, $args)
     {
-        $args['post'] = $this->container->db->table('pages')->where('pageslug', $args['slug'])->first();
         $args['lang'] = $this->container->lang;
+        $args['post'] = $this->container->db->table('pages')->where('pageslug', $args['slug'])->first();
+
+        if (!$args['post']) {
+            return $this->container->view->render($response->withStatus(404), '404.twig', $args);
+        }
+
         return $this->container->view->render($response, 'pages/serviceone.twig', $args);
     }
 
@@ -54,7 +60,7 @@ class PageController extends Controller
     {
         $result = array();
         $data = json_decode(json_encode($this->container->db->table('pricelist')->select()->get()->toArray()), true);
-        
+
         foreach ($data as $element) {
             $result[$element['group_ru']][] = $element;
         }
@@ -62,7 +68,7 @@ class PageController extends Controller
         $args['lang'] = $this->container->lang;
         $args['intro'] = $this->container->db->table('priceintro')->select()->first();
         $args['prices'] = $result;
-        
+
         return $this->container->view->render($response, 'pages/serviceprice.twig', $args);
     }
 
